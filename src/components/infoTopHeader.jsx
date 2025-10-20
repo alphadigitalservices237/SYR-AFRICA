@@ -3,8 +3,8 @@ import { NavLink } from "react-router"
 
 const InfoTopHeader = () => {
     return (
-        <section className="flex justify-center  items-center w-full">
-            <div className="w-full flex max-w-[1450px] px-44 justify-between items-center py-6">
+        <section className="hidden lg:flex justify-center  items-center w-full">
+            <div className="w-full flex max-w-[1450px] lg:px-44 justify-between items-center py-6">
                 <img src="/syr 2.png" alt="Vite Logo" className="h-16 w-16  object-cover mr-2" />
                 <div className="grid grid-cols-4 gap-8">
                     <div className="">
