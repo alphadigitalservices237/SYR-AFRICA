@@ -30,15 +30,15 @@ const Testimonials = () => {
     ];
 
     return (
-        <section className="flex justify-center z-10 bg-black relative min-h-[800px] md:min-h-[1000px] mt-28 pt-10 md:pt-20 items-start w-full">
-            <div className="w-full max-w-[1450px] px-4 md:px-8 lg:px-44">
-                <div className="text-center mb-10 md:mb-20">
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-white">
+        <section className="flex justify-center z-10 bg-black relative  min-h-[800px] pb-16 lg:pb-0 lg:min-h-[1000px] mt-28 pt-10 lg:pt-20 items-start w-full">
+            <div className="w-full max-w-[1450px] px-4  xl:px-44">
+                <div className="text-center mb-10 lg:mb-20">
+                    <h2 className="text-2xl  lg:text-4xl xl:text-5xl font-medium text-white">
                         What our <span className="text-primary">clients</span> say ?
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 px-2 md:px-5 md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+                <div className="grid grid-cols-1 px-2 lg:px-5 lg:grid-cols-2  gap-4  lg:gap-8">
                     {testimonials.map((testimonial, index) => (
                         <TestimonialCard
                             key={index}

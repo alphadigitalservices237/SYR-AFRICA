@@ -3,7 +3,7 @@ import { NavLink } from "react-router"
 
 const ProjectCard = ({ project }: { project: any }) => {
     return (
-        <div className="flex flex-col gap-6  justify-start items-start">
+        <div className="flex flex-col gap-6  min-h-[450px] justify-start items-start">
 
             <div className="h-[372px] w-full">
 
@@ -13,9 +13,9 @@ const ProjectCard = ({ project }: { project: any }) => {
 
             <span className="text-sm font-bold   border-primary  border-2 rounded-full px-4 py-2 ">{project.title}</span>
 
-            <h3 className="text-2xl font-bold">{project.title}</h3>
+            <h3 className="text-lg lg:text-2xl font-bold">{project.title}</h3>
 
-            <p className="text-xl text-gray-light">
+            <p className="text-sm lg:text-xl text-gray-light">
                 {project.description}
             </p>
 

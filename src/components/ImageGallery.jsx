@@ -92,10 +92,10 @@ const ImageGallery = ({ images }) => {
   return (
     <div className="flex flex-col w-full mt-2 justify-center   xl:mt-8 items-center">
       <div className="w-full flex justify-center items-center relative">
-        <div className="absolute top-0 left-0 right-0 bg-opacity-70 h-[70px] text-white flex justify-between items-centerz-10">
-          <span className="text-sm md:text-base  p-6   bg-black h-full flex justify-center items-center">{images.indexOf(currentImage) + 1} / {images.length}</span>
+        <div className="absolute top-0 left-0 right-0 bg-opacity-70 h-[50px] lg:h-[70px] text-white flex justify-between items-centerz-10">
+          <span className="text-sm lg:text-base  p-6   bg-black h-full flex justify-center items-center">{images.indexOf(currentImage) + 1} / {images.length}</span>
           <button
-            className="text-sm md:text-base  p-6   bg-black h-full flex justify-center items-center"
+            className="text-sm lg:text-base  p-6    bg-black h-full hidden lg:flex justify-center items-center"
             onClick={() => {
               setModalImage(currentImage);
               setIsModalOpen(true);
@@ -126,7 +126,7 @@ const ImageGallery = ({ images }) => {
           </button>
         </div>
         <button
-          className="absolute cursor-pointer left-3 md:left-5 top-1/2 transform -translate-y-1/2  backdrop-blur-sm p-3   rounded-full   transition-all duration-300"
+          className="absolute cursor-pointer left-3 lg:left-5 top-1/2 transform -translate-y-1/2  p-3     transition-all duration-300"
           onClick={handlePrevImage}
           aria-label="Image précédente"
         >
@@ -138,7 +138,7 @@ const ImageGallery = ({ images }) => {
             fill="none"
             viewBox="0 0 34 52"
 
-            className="size-4 md:size-16"
+            className="size-4 lg:size-16"
           >
             <path
               fill="#2C2C2C"
@@ -148,7 +148,7 @@ const ImageGallery = ({ images }) => {
           </svg>
 
         </button>
-        <div className="w-full h-[40vh] md:h-[60vh] overflow-hidden">
+        <div className="w-full h-[40vh] lg:h-[60vh] overflow-hidden">
           <img
             src={currentImage}
             alt="Image principale de la galerie"
@@ -156,7 +156,7 @@ const ImageGallery = ({ images }) => {
           />
         </div>
         <button
-          className="absolute cursor-pointer right-3 md:right-5 top-1/2 transform -translate-y-1/2  backdrop-blur-sm p-3   rounded-full   transition-all duration-300"
+          className="absolute cursor-pointer right-3 lg:right-5 top-1/2 transform -translate-y-1/2  p-3     transition-all duration-300"
           onClick={handleNextImage}
           aria-label="Image suivante"
         >
@@ -168,7 +168,7 @@ const ImageGallery = ({ images }) => {
     fill="none"
     viewBox="0 0 70 70"
     
-            className="size-4 md:size-16"
+            className="size-4 lg:size-16"
   >
     <path
       fill="#2C2C2C"
@@ -246,7 +246,7 @@ const ImageGallery = ({ images }) => {
         <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50" onClick={() => setIsModalOpen(false)}>
           <div className="relative flex items-center justify-center w-full h-full p-4">
             <button
-              className="absolute top-10 cursor-pointer right-2 text-white hover:bg-white/20 p-2 rounded-full transition-all duration-300"
+              className="absolute top-10 cursor-pointer right-2 text-whit20 p-2 transition-all duration-300"
               onClick={() => setIsModalOpen(false)}
               aria-label="Fermer la modale"
             >

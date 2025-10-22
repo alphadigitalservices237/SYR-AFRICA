@@ -28,9 +28,9 @@ const Projects = () => {
     };
 
     return (
-        <section className="flex relative justify-start z-10 pb-23   min-h-screen items-start w-full">
+        <section className="flex relative justify-start z-10 lg:pb-23  min-h-[950px]  lg:min-h-[950px] 2xl:min-h-screen items-start w-full">
             <div className='w-full bg-primary flex justify-center   h-auto items-start min-h-[373px]'>
-                <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-4 md:px-44  m-0 p-0 justify-start items-start">
+                <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-4 xl:px-44  m-0 p-0 justify-start items-start">
 
                     <span className="border-l-2 gap-2 pl-3 font-bold"> Projects </span>
                     <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center py-4 md:py-8 gap-4 md:gap-0">
@@ -69,9 +69,9 @@ const Projects = () => {
                     </div>
 
                 </div>
-                        <div className=" absolute w-full flex justify-center items-center overflow-x-hidden   top-[15%] md:top-[20%] left-0">
+                        <div className=" absolute w-full flex justify-center items-center overflow-x-hidden   top-[20%] md:top-[15%] xl:top-[20%] left-0">
 
-                <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-4 md:px-44  m-0 p-0 justify-start items-start">
+                <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-4 xl:px-44  m-0 p-0 justify-start items-start">
                         <div
                             ref={carouselRef}
                             className="flex gap-4 md:gap-6 transition-transform duration-300 ease-in-out"

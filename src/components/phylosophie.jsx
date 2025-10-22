@@ -3,9 +3,9 @@ import { NavLink } from "react-router"
 
 const Phylosophie = () => {
   return (
-    <section className="flex justify-center z-10  pt-18  pb-30 items-center w-full">
-      <div className="w-full flex max-w-[1450px] px-4 md:px-44  m-0 p-0 justify-between items-center flex-col md:flex-row">
-        <div className="w-full md:w-1/2 flex flex-col gap-8 md:gap-17 justify-between items-start">
+    <section className="flex justify-start xl:justify-center z-10  xl:pt-18   pb-8 xl:pb-30 items-center w-full">
+      <div className="w-full flex max-w-[1450px] px-4 xl:px-44  m-0 p-0 justify-between items-center flex-col-reverse lg:flex-row">
+        <div className="w-full lg:w-1/2 flex flex-col pt-8 gap-8 md:gap-17 justify-between items-start">
 
           <span className="border-l-2  border-primary gap-2 pl-3 font-bold"> Our Phylosophie </span>
 
@@ -32,8 +32,8 @@ const Phylosophie = () => {
           </div>
 
         </div>
-        <div className="flex justify-center items-center h-[250px] md:h-[409px] w-full md:w-1/2 mt-8 md:mt-0">
-          <img src="/psychology.png" className="w-full h-full object-cover" />
+        <div className="flex justify-center items-center  lg:h-[509px] md:pt-16   w-full lg:w-1/2 mt-8 md:mt-0">
+          <img src="/psychology.png" className="w-full h-full  object-contain" />
         </div>
       </div>
     </section>

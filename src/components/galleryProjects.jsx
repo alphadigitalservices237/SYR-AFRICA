@@ -13,9 +13,9 @@ const gallerie = [
 
 const GalleryProjects = () => {
     return (
-        <section className="flex relative justify-start z-10 pb-23   min-h-screen items-start w-full">
+        <section className="flex relative justify-start z-10 xl:pb-23  lg:min-h-[120vh] xl:min-h-screen items-start w-full">
             <div className='w-full bg-primary flex justify-center   h-auto items-start min-h-[373px]'>
-                <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-4 md:px-44  m-0 p-0 justify-start items-start">
+                <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-4 xl:px-44  m-0 p-0 justify-start items-start">
 
                     <span className="border-l-2 gap-2 pl-3 font-bold">Galerie Projects </span>
                     <div className="w-full flex flex-col items-start gap-4 py-4 md:py-8">
@@ -31,9 +31,9 @@ const GalleryProjects = () => {
                     </div>
 
                 </div>
-                 <div className=" absolute w-full flex justify-center items-center overflow-x-hidden   top-[20%] md:top-[24%] left-0">
+                 <div className=" absolute w-full flex justify-center items-center overflow-x-hidden top-[51%]  lg:top-[28%] xl:top-[24%] left-0">
 
-               <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-4 md:px-44  m-0 p-0 justify-start items-start">
+               <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] xl:px-44  m-0 p-0 justify-start items-start">
                <ImageGallery key={1} images={gallerie} />
 </div>
 

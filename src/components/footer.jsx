@@ -89,8 +89,8 @@ const Footer = () => {
   return (
     <footer className="flex flex-col  bg-black text-white w-full justify-center items-center">
 
-      <div className="max-w-[1450px]  py-8 md:py-12 px-4 md:px-44 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-16">
+      <div className="max-w-[1450px]  py-8 lg:py-12 px-4 xl:px-44 w-full">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
           {/* Logo et Contact Info */}
           <div className="flex flex-col gap-y-6">
@@ -101,19 +101,19 @@ const Footer = () => {
             <div className="flex flex-col gap-y-4 text-sm">
               <div className="flex flex-col gap-1">
                 <span className="font-medium  text-primary">Yaoundé - CMR</span>
-                <span className="text-white font-light  text-xs md:text-sm">Omnisport, Rue Coeur Ouvert</span>
+                <span className="text-white font-light  text-xs lg:text-sm">Omnisport, Rue Coeur Ouvert</span>
               </div>
 
               <div className="flex flex-col gap-1">
                 <span className="font-medium text-primary">Obala - CMR</span>
-                <span className="text-white   font-light   text-xs md:text-sm">Rue monte des anges</span>
+                <span className="text-white   font-light   text-xs lg:text-sm">Rue monte des anges</span>
               </div>
             </div>
 
-            <div className="flex justify-start gap-x-3 md:gap-x-4 items-center pt-2">
+            <div className="flex justify-start gap-x-3 lg:gap-x-4 items-center pt-2">
               {socialMedia?.map((elem, index) => (
                 <a key={"social" + index} target="_blank" rel="noopener noreferrer" href={elem.link}>
-                  <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
+                  <div className="w-8 h-8 lg:w-10 lg:h-10 flex items-center justify-center">
                     {elem.icon}
                   </div>
                 </a>
@@ -133,7 +133,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Ressources (hidden on mobile, shown on md) */}
+          {/* Ressources (hidden on mobile) */}
           <div className="hidden md:flex flex-col gap-y-6">
             <h3 className="text-sm font-medium  underline underline-offset-8 pb-8">Ressources</h3>
             <ul className="flex gap-y-3 justify-start items-start flex-col text-sm text-white font-light">
@@ -150,15 +150,15 @@ const Footer = () => {
             <h3 className="text-sm font-medium  underline underline-offset-8 pb-8">Contact</h3>
             <div className="flex flex-col justify-start items-start ">
 
-              <span className="text-white text-xs md:text-sm">Phone</span>
-              <div className="flex items-center gap-x-2 text-xs md:text-sm">
-                <Phone className="size-3 md:size-4 text-primary flex-shrink-0" />
+              <span className="text-white text-xs lg:text-sm">Phone</span>
+              <div className="flex items-center gap-x-2 text-xs lg:text-sm">
+                <Phone className="size-3 lg:size-4 text-primary flex-shrink-0" />
                 <span className="font-medium text-primary">(+237) 677 554 123</span>
               </div>
 
-              <span className="text-white text-xs md:text-sm pt-4">Email</span>
-              <div className="flex items-center gap-x-2 text-xs md:text-sm">
-                <Mail className="size-3 md:size-4 text-primary flex-shrink-0" />
+              <span className="text-white text-xs lg:text-sm pt-4">Email</span>
+              <div className="flex items-center gap-x-2 text-xs lg:text-sm">
+                <Mail className="size-3 lg:size-4 text-primary flex-shrink-0" />
                 <span className="font-medium text-primary">syrafrica@gmail.com</span>
               </div>
             </div>
@@ -167,16 +167,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between items-center py-4 md:py-6 px-4 md:px-44 w-full max-w-[1450px] gap-4 md:gap-0">
-        <span className="text-xs md:text-sm text-white text-center md:text-left">SYR Africa Copyright @2025 All Right Reserve</span>
-        <div className="flex justify-center md:justify-end gap-x-4 md:gap-x-6 items-center">
-          {socialMedia?.map((elem, index) => (
-            <a key={"footer-social" + index} target="_blank" rel="noopener noreferrer" href={elem.link}>
-              <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
-                {elem.icon}
-              </div>
-            </a>
-          ))}
+      <div className="flex flex-col lg:flex-row justify-between items-center py-4 lg:py-6 px-4 xl:px-44 w-full max-w-[1450px] gap-4 lg:gap-0">
+        <span className="text-xs lg:text-sm text-white  w-full text-left">SYR Africa Copyright @2025 All Right Reserve</span>
+        <div className="flex justify-center lg:justify-end gap-x-4 lg:gap-x-6 items-center">
+         
         </div>
       </div>
 
