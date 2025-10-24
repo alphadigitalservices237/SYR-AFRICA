@@ -60,7 +60,7 @@ const ProjetsPage = () => {
                         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full gap-4 lg:gap-0">
                             <h3 className="text-2xl lg:text-3xl text-black max-w-sm font-bold">We have been processing steel for about 15 years</h3>
 
-                            <NavLink to="/" className={"py-3 lg:py-5 flex gap-2 font-medium bg-primary justify-center items-center px-6 lg:px-8"}>
+                            <NavLink to="/contact" className={"py-3 lg:py-5 flex gap-2 font-medium bg-primary justify-center items-center px-6 lg:px-8"}>
                                 <span>Get a  Quote</span>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

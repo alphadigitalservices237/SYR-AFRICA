@@ -81,9 +81,9 @@ const ProjectGallery = ({ images }) => {
   }, [currentImage, images]);
 
   return (
-    <div className="flex flex-col w-full mt-2 justify-center items-center">
+    <div className="flex flex-col w-full h-[650px] mb-8 mt-2 justify-center items-center">
       <div className="w-full flex justify-center items-center relative">
-        <div className="w-full h-[40vh] lg:h-[60vh] overflow-hidden">
+        <div className="w-full h-[500px] overflow-hidden">
           <img
             src={currentImage}
             alt="Image principale de la galerie"
@@ -94,7 +94,7 @@ const ProjectGallery = ({ images }) => {
 
       <div
         ref={thumbnailsContainerRef}
-        className="flex gap-4 justify-between items-center mt-4 w-full overflow-x-auto scrollbar-hide"
+        className="flex gap-4 justify-between h-full items-center mt-4 w-full overflow-x-auto scrollbar-hide"
         style={{ scrollBehavior: "smooth", msOverflowStyle: "none", scrollbarWidth: "none" }}
       >
         <style>

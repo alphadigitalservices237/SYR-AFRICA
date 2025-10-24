@@ -16,7 +16,7 @@ const CTA = () => {
                         <h2 className='text-3xl lg:text-5xl text-black font-bold max-w-sm text-balance'>Ready to work
                             with us ?</h2>
 
-                        <NavLink to="/" className={"py-3 text-black  lg:py-5 flex gap-2 w-full max-w-xs bg-white font-medium justify-center items-center px-6 lg:px-8"}>
+                        <NavLink to="/contact" className={"py-3 text-black  lg:py-5 flex gap-2 w-full max-w-xs bg-white font-medium justify-center items-center px-6 lg:px-8"}>
                             <span>Get a quote today</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

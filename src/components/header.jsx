@@ -42,7 +42,7 @@ const Header = () => {
                         </li>
                     ))}
                 </ul>
-                <NavLink to={"/"} className={"flex  font-medium hover:bg-white justify-center gap-2 items-center  bg-primary px-4 lg:px-8 py-2 lg:py-4 text-sm lg:text-base"} >
+                <NavLink to={"/contact"} className={"flex  font-medium hover:bg-white justify-center gap-2 items-center  bg-primary px-4 lg:px-8 py-2 lg:py-4 text-sm lg:text-base"} >
                     <span>Get a  Quote</span>
                     <ArrowRightIcon className="w-4  lg:w-5 h-5" />
                 </NavLink>
@@ -91,7 +91,7 @@ const Header = () => {
                             ))}
                         </ul>
                         <div className="p-4 border-t border-gray-700">
-                            <NavLink to={"/"} className={"flex font-medium hover:bg-white justify-center gap-2 items-center bg-primary px-4 py-2 text-base"} onClick={() => setIsSidebarOpen(false)}>
+                            <NavLink to={"/contact"} className={"flex font-medium hover:bg-white justify-center gap-2 items-center bg-primary px-4 py-2 text-base"} onClick={() => setIsSidebarOpen(false)}>
                                 <span>Get a Quote</span>
                                 <ArrowRightIcon className="w-4 h-5" />
                             </NavLink>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router'
 import ProjectGallery from './ProjectGallery'
+import { ArrowRightIcon } from 'lucide-react'
 
 const ProjectModal = ({ project, isOpen, onClose }: { project: any, isOpen: boolean, onClose: () => void }) => {
     if (!isOpen) return null
@@ -16,10 +17,9 @@ const ProjectModal = ({ project, isOpen, onClose }: { project: any, isOpen: bool
     ]
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-90 flex  h-screen  pt-8 items-center justify-center z-50" onClick={onClose}>
+        <div className="fixed inset-0 bg-black bg-opacity-90 flex h-screen  overflow-auto pt-8 items-center justify-center z-[9999]" onClick={onClose}>
 
-            <div className="relative w-full h-full p-4 flex max-w-[1450px] flex-col lg:flex-row gap-8">
-            <div className="relative w-full h-full p-4 flex flex-col lg:flex-row gap-8">
+            <div className="relative w-full h-full p-4 flex max-w-[1450px]  xl:py-36  flex-col lg:flex-row gap-8">
                 <button
                     className="absolute top-4 right-4 text-white p-2 z-60"
                     onClick={onClose}
@@ -41,27 +41,28 @@ const ProjectModal = ({ project, isOpen, onClose }: { project: any, isOpen: bool
                     </svg>
                 </button>
 
-                
 
-                  <div className="lg:w-1/2">
+
+                <div className="lg:w-1/2 h-full" onClick={(e) => e.stopPropagation()}>
                     <ProjectGallery images={images} />
                 </div>
 
-                <div className="flex flex-col justify-start items-start gap-4 lg:w-1/2 text-white">
-                    <h2 className="text-3xl font-bold">SYR Africa Projects</h2>
-                    <h3 className="text-2xl font-bold">{project.title}</h3>
-                    <span className="text-sm font-medium rounded-full border-2 px-6 py-2 border-gray-400 text-white">{project.category}</span>
-                    <p className="text-gray-300">{project.description}</p>
-                    <div className="flex justify-between items-center mt-4">
-                        <span></span>
-                        <NavLink to="/" className="py-3 px-6 bg-primary text-white font-medium">
-                            Get a Quote
-                        </NavLink>
+                <div className="flex flex-col justify-between h-full items-start gap-4 lg:w-1/2 text-white" onClick={(e) => e.stopPropagation()}>
+                    <div className='block space-y-4 '>
+                        <h3 className="text-2xl font-bold">{project.title}</h3>
+                        <span className="text-sm font-medium flex-shrink-0 rounded-full  border-2 px-6 py-2 border-gray-light text-white">{project.category}</span>
+                        <p className="text-gray-300 my-4">{project.description}</p>
+
+
+
                     </div>
+                    <NavLink to={"/contact"} className={"flex  mb-5  lg:mb-0 font-medium  text-black w-full hover:bg-white justify-center gap-2 items-center  bg-primary px-4 lg:px-8 py-4 lg:py-4 text-sm lg:text-base"} >
+                        <span>Get a  Quote</span>
+                        <ArrowRightIcon className="w-4  lg:w-5 h-5" />
+                    </NavLink>
                 </div>
 
-              
-            </div>
+
             </div>
         </div>
     )

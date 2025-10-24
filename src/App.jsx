@@ -5,6 +5,7 @@ import './App.css'
 import Layout from './components/layout'
 import Home from './pages/Home'
 import Story from './pages/story'
+import Contact from './pages/Contact'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import Servicespage from './components/servicespage'
 import ProjetsPage from './components/projetspage'
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="story" element={<Story />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="services" element={<Servicespage />} />
           <Route path="projets" element={<ProjetsPage />} />
         </Route>
