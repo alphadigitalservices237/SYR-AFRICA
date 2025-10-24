@@ -36,7 +36,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
-      <section className="flex relative justify-start z-10  items-start w-full">
+      <section className="flex  relative -top-[55px]  justify-start z-10  items-start w-full">
         <div className=' absolute  h-full lg:h-[700px] overflow-hidden w-full'>
           <img src='./hero2.jpg' className='h-full w-full   object-cover' />
         </div>
