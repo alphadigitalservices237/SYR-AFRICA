@@ -13,10 +13,10 @@ const CTA = () => {
                 <div className="w-full  relative flex flex-col lg:flex-row justify-between  max-w-[1450px] px-4 xl:px-44  h-full m-0 p-0  items-start">
                     <div className='w-full lg:w-1/2   py-8 lg:py-16 flex flex-col gap-4 lg:gap-6 justify-center  items-center lg:items-start h-full'>
 
-                        <h2 className='text-3xl lg:text-5xl font-bold max-w-sm text-balance'>Ready to work
+                        <h2 className='text-3xl lg:text-5xl text-black font-bold max-w-sm text-balance'>Ready to work
                             with us ?</h2>
 
-                        <NavLink to="/" className={"py-3 lg:py-5 flex gap-2 w-full max-w-xs bg-white font-medium justify-center items-center px-6 lg:px-8"}>
+                        <NavLink to="/" className={"py-3 text-black  lg:py-5 flex gap-2 w-full max-w-xs bg-white font-medium justify-center items-center px-6 lg:px-8"}>
                             <span>Get a quote today</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

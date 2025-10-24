@@ -2,36 +2,25 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import InfoTopHeader from './components/infoTopHeader'
-import { BrowserRouter } from 'react-router'
-import Header from './components/header'
-import HeroSection from './components/heroSection'
-import Phylosophie from './components/phylosophie'
-import Projects from './components/projects'
-import Services from './components/services'
-import Achievements from './components/achievements'
-import GalleryProjects from './components/galleryProjects'
-import Testimonials from './components/testimonials'
-import CTA from './components/CTA'
-import Footer from './components/footer'
+import Layout from './components/layout'
+import Home from './pages/Home'
+import Story from './pages/story'
+import { BrowserRouter, Route, Routes } from 'react-router'
+import Servicespage from './components/servicespage'
+import ProjetsPage from './components/projetspage'
 
 function App() {
 
   return (
     <BrowserRouter>
-    <div className='bg-white m-0  min-h-screen flex flex-col justify-start items-start w-full '>
-      <InfoTopHeader />
-      <Header/>
-      <HeroSection/>
-      <Phylosophie />
-      <Projects/>
-      <Services />
-      <Achievements />
-      <GalleryProjects/>
-      <Testimonials/>
-      <CTA/>
-      <Footer/>
-    </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="story" element={<Story />} />
+          <Route path="services" element={<Servicespage />} />
+          <Route path="projets" element={<ProjetsPage />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   )
 }

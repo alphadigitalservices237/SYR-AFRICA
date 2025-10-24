@@ -3,7 +3,7 @@ import { NavLink } from "react-router"
 
 const ProjectCard = ({ project }: { project: any }) => {
     return (
-        <div className="flex flex-col gap-6  min-h-[450px] justify-start items-start">
+        <div className="flex flex-col gap-6  justify-start items-start">
 
             <div className="h-[372px] w-full">
 

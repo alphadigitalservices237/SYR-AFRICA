@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, Twitter } from "lucide-react";
 import { NavLink } from "react-router";
+import CTA from "./CTA";
 
 const Footer = () => {
 
@@ -89,6 +90,8 @@ const Footer = () => {
   return (
     <footer className="flex flex-col  bg-black text-white w-full justify-center items-center">
 
+      <CTA />
+
       <div className="max-w-[1450px]  py-8 lg:py-12 px-4 xl:px-44 w-full">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
 
@@ -170,7 +173,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row justify-between items-center py-4 lg:py-6 px-4 xl:px-44 w-full max-w-[1450px] gap-4 lg:gap-0">
         <span className="text-xs lg:text-sm text-white  w-full text-left">SYR Africa Copyright @2025 All Right Reserve</span>
         <div className="flex justify-center lg:justify-end gap-x-4 lg:gap-x-6 items-center">
-         
+
         </div>
       </div>
 

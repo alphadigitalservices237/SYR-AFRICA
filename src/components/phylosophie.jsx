@@ -3,7 +3,7 @@ import { NavLink } from "react-router"
 
 const Phylosophie = () => {
   return (
-    <section className="flex justify-start xl:justify-center z-10  xl:pt-18   pb-8 xl:pb-30 items-center w-full">
+    <section className="flex justify-start xl:justify-center z-10      pb-8 xl:pb-30 items-center w-full">
       <div className="w-full flex max-w-[1450px] px-4 xl:px-44  m-0 p-0 justify-between items-center flex-col-reverse lg:flex-row">
         <div className="w-full lg:w-1/2 flex flex-col pt-8 gap-8 md:gap-17 justify-between items-start">
 
