@@ -1,0 +1,12 @@
+services:
+  tchoupe-palace:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - caddy-network
+    restart: always  
+networks:
+  caddy-network:
+    external: true
+

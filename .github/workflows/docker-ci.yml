@@ -1,0 +1,79 @@
+name: Deploy syrafrica
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy and Start syrafrica Container
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          ssh -v $SSH_USER@$SSH_HOST -p 22 -o StrictHostKeyChecking=no << 'EOF'
+            # Mettre à jour le code source
+            if [ ! -d "/var/www/SYR-AFRICA" ]; then
+              echo "Directory not found, creating and cloning repository..."
+              mkdir -p /var/www/SYR-AFRICA
+              cd /var/www/SYR-AFRICA
+              git clone https://github.com/alphadigitalservices237/SYR-AFRICA.git .
+            else
+              echo "Directory exists, updating repository..."
+              cd /var/www/SYR-AFRICA
+              git fetch origin
+              git checkout main
+              git reset --hard origin/main
+              git clean -fd
+              git pull origin main || { echo "Git pull failed"; exit 1; }
+            fi
+            
+            echo "Code source updated successfully!"
+            
+            # Aller dans le répertoire contenant docker-compose.yml
+            cd /var/www/
+            
+            # Vérifier que docker-compose.yml existe
+            if [ ! -f "docker-compose.yml" ]; then
+              echo "Error: docker-compose.yml not found in /var/www/"
+              exit 1
+            fi
+            
+            echo "Building and starting syrafrica container..."
+            
+            # Arrêter uniquement le conteneur syrafrica
+            docker stop syrafrica || true
+            docker rm syrafrica || true
+            
+            # Reconstruire le service avec --no-cache pour forcer la reconstruction
+            docker compose build --no-cache syrafrica
+            
+            # Démarrer le service en mode détaché
+            docker compose up -d syrafrica
+            
+            # Vérifier que le conteneur est bien démarré
+            if docker ps | grep syrafrica; then
+              echo "Container syrafrica is running successfully!"
+            else
+              echo "Error: Container syrafrica failed to start"
+              docker logs syrafrica
+              exit 1
+            fi
+            
+            # Nettoyer les images non utilisées
+            echo "Cleaning up unused Docker images..."
+            docker image prune -f --filter "dangling=true"
+            
+            echo "Deployment completed successfully!"
+          EOF
