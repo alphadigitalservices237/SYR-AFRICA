@@ -1,8 +1,10 @@
 import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, Twitter } from "lucide-react";
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 import CTA from "./CTA";
 
 const Footer = () => {
+  const location = useLocation();
+  const isContactPage = location.pathname === '/contact';
 
   const fastLinkTab = [
     {
@@ -90,7 +92,7 @@ const Footer = () => {
   return (
     <footer className="flex flex-col  bg-black text-white w-full justify-center items-center">
 
-      <CTA />
+      {!isContactPage && <CTA />}
 
       <div className="max-w-[1450px]  py-8 lg:py-12 px-4 xl:px-44 w-full">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
