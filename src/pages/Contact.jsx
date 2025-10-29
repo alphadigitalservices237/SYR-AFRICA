@@ -1,37 +1,68 @@
 import { ArrowRightIcon } from 'lucide-react';
 import React, { useState } from 'react';
 import { NavLink } from 'react-router';
+import { useForm } from 'react-hook-form';
+import emailjs from '@emailjs/browser';
+import { toast } from 'sonner';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    companyName: '',
-    email: '',
-    phone: '',
-    contactMethod: '',
-    projectType: '',
-    projectDescription: '',
-    city: '',
-    country: '',
-    siteAddress: '',
-    startDate: '',
-    timeline: '',
-    agreeContact: false,
-    acceptPolicy: false,
+  const [loading, setLoading] = React.useState(false);
+  const serviceKey = import.meta.env.VITE_ID_SERVICE_EMAIL || "";
+  const templateKey = import.meta.env.VITE_ID_TEMPLATE_EMAIL || "";
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY_EMAIL || "";
+
+  React.useEffect(() => {
+    emailjs.init({
+      publicKey,
+      blockHeadless: true,
+      blockList: { watchVariable: "phone" },
+      limitRate: { id: "app", throttle: 10000 },
+    });
+  }, [publicKey]);
+
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    mode: 'onChange'
   });
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === 'checkbox' ? checked : value,
-    });
-  };
+  const onSubmit = (data) => {
+    setLoading(true);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+    const messageAllFields = `
+      Full Name: ${data.fullName}
+      Company Name: ${data.companyName}
+      Email: ${data.email}
+      Phone: ${data.phone}
+      Preferred Contact Method: ${data.contactMethod}
+      Project Type: ${data.projectType}
+      Project Description: ${data.projectDescription}
+      City: ${data.city}
+      Country: ${data.country}
+      Site Address: ${data.siteAddress}
+      Expected Start Date: ${data.startDate}
+      Estimated Completion Timeline: ${data.timeline}
+      Agree to Contact: ${data.agreeContact ? 'Yes' : 'No'}
+      Accept Policy: ${data.acceptPolicy ? 'Yes' : 'No'}
+    `;
+
+    const templateParams = {
+      name: data.fullName,
+      title: data.projectType,
+      email: data.email,
+      message: messageAllFields
+    };
+
+    emailjs
+      .send(serviceKey, templateKey, templateParams)
+      .then(() => {
+        setLoading(false);
+        reset();
+        toast.success("Message sent successfully");
+      })
+      .catch((error) => {
+        console.log("Error:", error);
+        setLoading(false);
+        toast.error("An error occurred while sending the message");
+      });
   };
 
   return (
@@ -56,7 +87,7 @@ const Contact = () => {
       <div className="lg:py-12  lg:px-8">
         <div className="max-w-3xl lg:mx-auto">
        
-        <form onSubmit={handleSubmit} className="  lg:mb-56 p-4 lg:p-8 space-y-8">
+        <form onSubmit={handleSubmit(onSubmit)} className="  lg:mb-56 p-4 lg:p-8 space-y-8">
      
           <div className=" pb-6">
             <h2 className="text-2xl font-semibold text-[#B58000] mb-4">Contact Information</h2>
@@ -68,12 +99,10 @@ const Contact = () => {
                 <input
                   type="text"
                   id="fullName"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleChange}
+                  {...register("fullName", { required: "Full name is required" })}
                   className="mt-1 block w-full border-[#B58000] border  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
-                  required
                 />
+                {errors.fullName && <span className="text-red-500 text-sm">{errors.fullName.message}</span>}
               </div>
 
               <div>
@@ -81,9 +110,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="companyName"
-                  name="companyName"
-                  value={formData.companyName}
-                  onChange={handleChange}
+                  {...register("companyName")}
                   className="mt-1 block w-full border-[#B58000] border  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
                 />
               </div>
@@ -93,12 +120,16 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^\S+@\S+$/i,
+                      message: "Invalid email address"
+                    }
+                  })}
                   className="mt-1 block w-full border-[#B58000] border  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
-                  required
                 />
+                {errors.email && <span className="text-red-500 text-sm">{errors.email.message}</span>}
               </div>
 
               <div>
@@ -106,12 +137,16 @@ const Contact = () => {
                 <input
                   type="tel"
                   id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
+                  {...register("phone", {
+                    required: "Phone number is required",
+                    pattern: {
+                      value: /^\d{9}$/,
+                      message: "Phone number must be 9 digits"
+                    }
+                  })}
                   className="mt-1 block w-full border-[#B58000] border  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
-                  required
                 />
+                {errors.phone && <span className="text-red-500 text-sm">{errors.phone.message}</span>}
               </div>
             </div>
 
@@ -121,9 +156,8 @@ const Contact = () => {
                 <label className="flex items-center">
                   <input
                     type="radio"
-                    name="contactMethod"
                     value="Phone Call"
-                    onChange={handleChange}
+                    {...register("contactMethod", { required: "Please select a contact method" })}
                     className="border-[#B58000] focus:ring-[#B58000]"
                   />
                   <span className="ml-2">Phone Call</span>
@@ -131,9 +165,8 @@ const Contact = () => {
                 <label className="flex items-center">
                   <input
                     type="radio"
-                    name="contactMethod"
                     value="E-mail"
-                    onChange={handleChange}
+                    {...register("contactMethod", { required: "Please select a contact method" })}
                     className="border-[#B58000] focus:ring-[#B58000]"
                   />
                   <span className="ml-2">E-mail</span>
@@ -141,14 +174,14 @@ const Contact = () => {
                 <label className="flex items-center">
                   <input
                     type="radio"
-                    name="contactMethod"
                     value="WhatsApp"
-                    onChange={handleChange}
+                    {...register("contactMethod", { required: "Please select a contact method" })}
                     className="border-[#B58000] focus:ring-[#B58000]"
                   />
                   <span className="ml-2">WhatsApp</span>
                 </label>
               </div>
+              {errors.contactMethod && <span className="text-red-500 text-sm">{errors.contactMethod.message}</span>}
             </div>
           </div>
 
@@ -157,20 +190,18 @@ const Contact = () => {
             <h2 className="text-2xl font-semibold text-[#B58000] mb-4">Project Details</h2>
             <p className="text-gray-light mb-6">Helps identify the type of service requested.</p>
   <div>
-                <label htmlFor="projectType" className="block text-sm font-medium  text-gray-700">Project Type</label>
-                <select
-                  id="projectType"
-                  name="projectType"
-                  value={formData.projectType}
-                  onChange={handleChange}
-                  className="mt-1 block w-full border-[#B58000] border my-8  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
-                  required
-                >
-                  <option value="">Select Project Type</option>
-                  <option value="Boilermaking & Forging">Boilermaking & Forging</option>
-                  {/* Add more options as needed */}
-                </select>
-              </div>
+    <label htmlFor="projectType" className="block text-sm font-medium  text-gray-700">Project Type</label>
+    <select
+      id="projectType"
+      {...register("projectType", { required: "Project type is required" })}
+      className="mt-1 block w-full border-[#B58000] border my-8  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
+    >
+      <option value="">Select Project Type</option>
+      <option value="Boilermaking & Forging">Boilermaking & Forging</option>
+      {/* Add more options as needed */}
+    </select>
+    {errors.projectType && <span className="text-red-500 text-sm">{errors.projectType.message}</span>}
+  </div>
             <div className="grid grid-cols-1 w-full md:grid-cols-2 gap-6">
             
 
@@ -178,14 +209,12 @@ const Contact = () => {
                 <label htmlFor="projectDescription" className="block text-sm font-medium text-gray-700">Project Description *</label>
                 <textarea
                   id="projectDescription"
-                  name="projectDescription"
-                  value={formData.projectDescription}
-                  onChange={handleChange}
+                  {...register("projectDescription", { required: "Project description is required" })}
                   rows={4}
                   className="mt-1 block w-full border-[#B58000] border  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
                   placeholder="Describe your needs, dimensions, materials, or specific requirements."
-                  required
                 />
+                {errors.projectDescription && <span className="text-red-500 text-sm">{errors.projectDescription.message}</span>}
               </div>
 
               <div>
@@ -193,9 +222,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="city"
-                  name="city"
-                  value={formData.city}
-                  onChange={handleChange}
+                  {...register("city")}
                   placeholder="Enter city"
                   className="mt-1 block w-full border-[#B58000] border  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
                 />
@@ -206,9 +233,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="country"
-                  name="country"
-                  value={formData.country}
-                  onChange={handleChange}
+                  {...register("country")}
                   placeholder="Enter country"
                   className="mt-1 block w-full border-[#B58000] border  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
                 />
@@ -219,9 +244,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="siteAddress"
-                  name="siteAddress"
-                  value={formData.siteAddress}
-                  onChange={handleChange}
+                  {...register("siteAddress")}
                   placeholder="Enter site address"
                   className="mt-1 block w-full border-[#B58000] border  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
                 />
@@ -232,9 +255,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="startDate"
-                  name="startDate"
-                  value={formData.startDate}
-                  onChange={handleChange}
+                  {...register("startDate")}
                   placeholder="DD/MM/YYYY"
                   className="mt-1 block w-full border-[#B58000] border  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
                 />
@@ -245,9 +266,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="timeline"
-                  name="timeline"
-                  value={formData.timeline}
-                  onChange={handleChange}
+                  {...register("timeline")}
                   placeholder="Enter value in months (ex: 12 months)"
                   className="mt-1 block w-full border-[#B58000] border  shadow-sm py-2 px-3 focus:outline-none focus:ring-[#B58000] focus:border-[#B58000]"
                 />
@@ -260,34 +279,40 @@ const Contact = () => {
             <label className="flex items-center">
               <input
                 type="checkbox"
-                name="agreeContact"
-                checked={formData.agreeContact}
-                onChange={handleChange}
+                {...register("agreeContact", {
+                  required: "You must agree to be contacted",
+                  validate: value => value === true || "You must agree to be contacted"
+                })}
                 className="border-[#B58000] size-6 border  focus:ring-[#B58000]"
-                required
               />
               <span className="ml-2 text-sm">I agree to be contacted regarding my project inquiry.</span>
             </label>
+            {errors.agreeContact && <span className="text-red-500 text-sm">{errors.agreeContact.message}</span>}
 
             <label className="flex items-center">
               <input
                 type="checkbox"
-                name="acceptPolicy"
-                checked={formData.acceptPolicy}
-                onChange={handleChange}
+                {...register("acceptPolicy", {
+                  required: "You must accept the privacy policy",
+                  validate: value => value === true || "You must accept the privacy policy"
+                })}
                 className="border-[#B58000] size-6 border border-[] focus:ring-[#B58000]"
-                required
               />
               <span className="ml-2 text-sm">I accept the privacy policy.</span>
             </label>
+            {errors.acceptPolicy && <span className="text-red-500 text-sm">{errors.acceptPolicy.message}</span>}
           </div>
 
           {/* Submit Button */}
           <div className="text-center w-full">
-           <NavLink to={"/"} className={"flex py-4  font-medium hover:bg-black hover:text-white justify-center gap-2 items-center  bg-primary px-4 lg:px-8 py-2 lg:py-4 text-sm lg:text-base"} >
-                    <span>Get a  Quote</span>
-                    <ArrowRightIcon className="w-4  lg:w-5 h-5" />
-                </NavLink>
+           <button
+             type="submit"
+             disabled={loading}
+             className={"flex py-4 w-full font-medium hover:bg-black hover:text-white justify-center gap-2 items-center bg-primary px-4 lg:px-8 py-2 lg:py-4 text-sm lg:text-base disabled:opacity-50"}
+           >
+             <span>{loading ? "Sending..." : "Get a Quote"}</span>
+             <ArrowRightIcon className="w-4 lg:w-5 h-5" />
+           </button>
           </div>
         </form>
         </div>

@@ -7,7 +7,7 @@ const Phylosophie = () => {
       <div className="w-full flex max-w-[1450px] px-4 xl:px-44  m-0 p-0 justify-between items-center flex-col-reverse lg:flex-row">
         <div className="w-full lg:w-1/2 flex flex-col pt-8 gap-8 md:gap-17 justify-between items-start">
 
-          <span className="border-l-2  border-primary gap-2 pl-3 font-bold"> Our Phylosophie </span>
+          <span className="border-l-2  border-primary gap-2 pl-3 font-bold"> Our Phylosophy </span>
 
           <div className="flex flex-col justify-start items-start gap-4 ">
 
