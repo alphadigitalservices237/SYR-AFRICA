@@ -1,3 +1,4 @@
+import { Instagram } from "lucide-react"
 import { NavLink } from "react-router"
 
 
@@ -27,7 +28,7 @@ const InfoTopHeader = () => {
                                 </svg>
                                 <span className="font-bold text-sm">Call Support</span>
                             </div>
-                            <span className="text-sm font-medium">+237 699 99 99 99</span>
+                            <span className="text-sm font-medium">(+237) 677 554 123</span>
 
                         </div>
 
@@ -92,32 +93,21 @@ const InfoTopHeader = () => {
                             <div className="w-full">
                                 <div className="text-sm flex w-full  justify-between items-center font-medium">
                                     <NavLink to={"#"} className="mr-2">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="25"
-                                            fill="none"
-                                            viewBox="0 0 24 25"
-                                        >
-                                            <path
-                                                fill="#09090B"
-                                                d="M22 12.5c0-5.52-4.48-10-10-10S2 6.98 2 12.5c0 4.84 3.44 8.87 8 9.8v-6.8H8v-3h2V10c0-1.93 1.57-3.5 3.5-3.5H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"
-                                            ></path>
-                                        </svg>
+                                        <Instagram />
                                     </NavLink>
                                     <NavLink to={"#"} className="mr-2">
                                         <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="25"
-                                            fill="none"
-                                            viewBox="0 0 24 25"
-                                        >
-                                            <path
-                                                fill="#09090B"
-                                                d="M20.47 2.5H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14a1.45 1.45 0 0 0 1.47 1.43h16.94a1.45 1.45 0 0 0 1.47-1.43V3.93a1.45 1.45 0 0 0-1.47-1.43M8.09 19.24h-3v-9h3zM6.59 8.98a1.56 1.56 0 0 1 0-3.12 1.57 1.57 0 1 1 0 3.12m12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2a1.65 1.65 0 0 0-1.54 1.09 2 2 0 0 0-.1.73v5h-3v-9h3v1.27a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06z"
-                                            ></path>
-                                        </svg>
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <path
+      fill="#09090B"
+      d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
+    ></path>
+  </svg>
                                     </NavLink>
 
                                     <NavLink to={"#"} className="mr-2">
