@@ -54,7 +54,7 @@ const InfoTopHeader = () => {
                                 </svg>
                                 <span className="font-bold text-sm">Email Support</span>
                             </div>
-                            <span className="text-sm font-medium">syrafrica@gmail.com</span>
+                            <span className="text-sm font-medium">syrafrica_cameroon@yahoo.com</span>
 
                         </div>
 

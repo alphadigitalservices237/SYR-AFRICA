@@ -1,5 +1,5 @@
 services:
-  tchoupe-palace:
+  syrafrica:
     build:
       context: .
       dockerfile: Dockerfile
