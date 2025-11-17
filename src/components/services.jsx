@@ -2,11 +2,13 @@ import { NavLink } from "react-router"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useTranslation } from 'react-i18next';
 
 gsap.registerPlugin(ScrollTrigger)
 
 
 const Services = () => {
+    const { t } = useTranslation();
     const servicesRef = useRef(null)
 
     useEffect(() => {
@@ -39,12 +41,12 @@ const Services = () => {
         <section ref={servicesRef} className="flex justify-center z-10 bg-black relative h-auto lg:h-[650px] lg:mt-28 pt-10 lg:pt-28   items-center w-full ">
             <div className="w-full flex max-w-[1450px] px-4 xl:px-44 m-0 p-0 justify-between items-center ">
                 <div className="w-full flex flex-col gap-8 lg:gap-17 justify-between items-start">
-                    <span className="border-l-2  border-primary text-white gap-2 pl-3 font-bold"> Services </span>
+                    <span className="border-l-2  border-primary text-white gap-2 pl-3 font-bold">{t("services")}</span>
                     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full gap-4 lg:gap-0">
-                        <h3 className="text-2xl lg:text-3xl text-white max-w-sm font-bold">We have been processing steel for about 15 years</h3>
+                        <h3 className="text-2xl lg:text-3xl text-white max-w-sm font-bold">{t("servicesSubtitle")}</h3>
 
-                        <NavLink to="/" className={"py-3 lg:py-5 flex gap-2 font-medium bg-white justify-center items-center px-6 lg:px-8"}>
-                            <span>learn more</span>
+                        <NavLink to="/services" className={"py-3 lg:py-5 flex gap-2 font-medium bg-white justify-center items-center px-6 lg:px-8"}>
+                            <span>{t("learnMore")}</span>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="21"
@@ -64,27 +66,27 @@ const Services = () => {
                         <div className="service-card relative bg-cover bg-[url('/hero2.jpg')] w-[300px] lg:w-full h-full flex-shrink-0">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
                             <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
-                                <h4 className="text-white w-full text-xl lg:text-2xl">Boilermaking & forging</h4>
+                                <h4 className="text-white w-full text-xl lg:text-2xl">{t("metalConstructionFabrication")}</h4>
                                 <p className="text-[#C8C8C8] max-w-xs text-sm lg:text-base">
-                                  Roofting and other metalics structures
+                                  {t("metalConstructionDesc")}
                                 </p>
                             </div>
                         </div>
                           <div className="service-card relative bg-cover bg-[url('/hero3.jpg')] w-[300px] lg:w-full h-full flex-shrink-0">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
                             <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
-                                <h4 className="text-white w-full text-xl lg:text-2xl">Metal fabrication</h4>
+                                <h4 className="text-white w-full text-xl lg:text-2xl">{t("industrialSystemsEquipment")}</h4>
                                 <p className="text-[#C8C8C8] max-w-xs text-sm lg:text-base">
-                                    Various fabrications (gates, windows, etc.)
+                                    {t("industrialSystemsDesc")}
                                 </p>
                             </div>
                         </div>
                           <div className="service-card relative bg-cover bg-[url('/hero4.jpg')] w-[300px] lg:w-full h-full flex-shrink-0">
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
                             <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
-                                <h4 className="text-white w-full text-xl lg:text-2xl">Piping</h4>
+                                <h4 className="text-white w-full text-xl lg:text-2xl">{t("architecturalMetalworks")}</h4>
                                 <p className="text-[#C8C8C8] max-w-xs text-sm lg:text-base">
-                                    Carbon steel, stainless steel, cupper, etc.
+                                    {t("architecturalMetalworksDesc")}
                                 </p>
                             </div>
                         </div>

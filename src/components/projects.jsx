@@ -2,17 +2,19 @@
 
 import React, { useState, useRef } from 'react';
 import ProjectCard from './projectCard';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
+    const { t } = useTranslation();
     const [currentIndex, setCurrentIndex] = useState(0);
     const carouselRef = useRef(null);
 
     const projects = [
-        { id: 1, image: '/project1.jpg', title: 'Construction of a 5-storey building in Nairobi', description: 'Lorem ipsum morbi est quis malesuada velit gravida turpis magna eget dui amet eros volutpat tellus vulputate non ut tincidunt ut sapien amet risus dolor.' },
-        { id: 2, image: '/project2.jpg', title: 'Reconstruction Salle de Fête Omnisport', description: 'Lorem ipsum morbi est quis malesuada velit gravida turpis magna eget dui amet eros volutpat tellus vulputate non ut tincidunt ut sapien amet risus dolor.' },
-        { id: 3, image: '/project3.jpg', title: 'Another Project', description: 'Lorem ipsum morbi est quis malesuada velit gravida turpis magna eget dui amet eros volutpat tellus vulputate non ut tincidunt ut sapien amet risus dolor.' },
-        { id: 4, image: '/project2.jpg', title: 'Fourth Project', description: 'Lorem ipsum morbi est quis malesuada velit gravida turpis magna eget dui amet eros volutpat tellus vulputate non ut tincidunt ut sapien amet risus dolor.' },
-        { id: 5, image: '/project1.jpg', title: 'Fifth Project', description: 'Lorem ipsum morbi est quis malesuada velit gravida turpis magna eget dui amet eros volutpat tellus vulputate non ut tincidunt ut sapien amet risus dolor.' },
+        { id: 1, image: '/st josue/1.jpg', title: t('project1Title'), description: t('project1Desc') },
+        { id: 2, image: '/Charpente City Stade FEICOM/1.jpeg', title: t('project2Title'), description: t('project2Desc') },
+        { id: 3, image: '/tradex/WhatsApp Image 2025-11-16 at 14.25.59 (2).jpeg', title: t('project3Title'), description: t('project3Desc') },
+        { id: 4, image: '/Mayonnaise ROMA/1.jpeg', title: t('project4Title'), description: t('project4Desc') },
+        { id: 5, image: '/Montage De Pont roulant/WhatsApp Image 2025-11-16 at 14.27.30.jpeg', title: t('project5Title'), description: t('project5Desc') },
     ];
 
     const nextSlide = () => {
@@ -32,10 +34,10 @@ const Projects = () => {
             <div className='w-full bg-primary flex justify-center   h-auto items-start min-h-[373px]'>
                 <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-4 xl:px-44  m-0 p-0 justify-start items-start">
 
-                    <span className="border-l-2 gap-2 pl-3 font-bold"> Projects </span>
+                    <span className="border-l-2 gap-2 pl-3 font-bold">{t("projectsHome")}</span>
                     <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center py-4 md:py-8 gap-4 md:gap-0">
 
-                        <h2 className="text-2xl md:text-4xl font-bold text-balance max-w-lg">They Trusted us For our Value delivery expertise</h2>
+                        <h2 className="text-2xl md:text-4xl font-bold text-balance max-w-lg">{t("projectsHomeTitle")}</h2>
                         <div className='flex justify-center gap-2 items-center'>
 
                             <button onClick={prevSlide} className='bg-black text-white hover:bg-white hover:text-black cursor-pointer px-3 md:px-5 py-2 flex justify-center items-center gap-2 transition-colors duration-300'>
@@ -75,7 +77,7 @@ const Projects = () => {
                         <div
                             ref={carouselRef}
                             className="flex gap-4 md:gap-6 transition-transform duration-300 ease-in-out"
-                            style={{ transform: `translateX(-${currentIndex * (100 / 2.5)}%)` }}
+                            style={{ transform: `translateX(-${currentIndex * (100 / 2)}%)` }}
                         >
                             {projects.map((project) => (
                                 <div key={project.id} className="flex-shrink-0 w-4/5 md:w-2/5">

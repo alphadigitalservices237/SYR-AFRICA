@@ -1,12 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router'
+import { useTranslation } from 'react-i18next';
 
 const ProjectItem = ({ project, onLearnMore }: { project: any, onLearnMore: () => void }) => {
+    const { t } = useTranslation();
     return (
         <div className="flex flex-col lg:flex-row gap-8">
 
             <div className="lg:w-1/3">
-                <img src={project.image} className="w-full h-[300px] object-contain" />
+                <img src={project.image} className="w-full h-[300px] object-cover" />
             </div>
              <div className="flex flex-col justify-start  items-start gap-4 lg:w-2/3">
                 <h3 className="text-2xl text-left text-balance font-bold">{project.title}</h3>
@@ -14,7 +16,7 @@ const ProjectItem = ({ project, onLearnMore }: { project: any, onLearnMore: () =
                 <p className="text-gray-light text-left">{project.description}</p>
                 <div className="flex  gap-4">
                     <button onClick={onLearnMore} className={"py-3 lg:py-5 flex gap-2 font-medium bg-primary justify-center items-center px-6 lg:px-8"}>
-              <span>learn more</span>
+              <span>{t('learnMore')}</span>
 
                      <svg
                                     xmlns="http://www.w3.org/2000/svg"

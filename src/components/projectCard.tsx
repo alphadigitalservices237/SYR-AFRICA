@@ -1,7 +1,9 @@
 import { NavLink } from "react-router"
+import { useTranslation } from 'react-i18next';
 
 
 const ProjectCard = ({ project }: { project: any }) => {
+    const { t } = useTranslation();
     return (
         <div className="flex flex-col gap-6  justify-start items-start">
 
@@ -19,8 +21,8 @@ const ProjectCard = ({ project }: { project: any }) => {
                 {project.description}
             </p>
 
-            <NavLink to="/" className={"py-5 flex gap-2 font-medium text-gray-light justify-center items-center "}>
-                <span>Find out More</span>
+            <NavLink to="/projets" className={"py-5 flex gap-2 font-medium text-gray-light justify-center items-center "}>
+                <span>{t('findOutMore')}</span>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

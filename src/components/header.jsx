@@ -1,17 +1,23 @@
 import { ArrowRightIcon, Hamburger } from 'lucide-react';
 import React, { useState } from 'react'
 import { NavLink } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+    const { t, i18n } = useTranslation();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const menuItems = [
-        { name: 'Home', path: '/' },
-        { name: 'Story', path: '/story' },
-        { name: 'Services', path: '/services' },
-        { name: 'projets', path: '/projets' },
-        { name: 'Contact', path: '/contact' }
+        { name: t('home'), path: '/' },
+        { name: t('story'), path: '/story' },
+        { name: t('services'), path: '/services' },
+        { name: t('projects'), path: '/projets' },
+        { name: t('contact'), path: '/contact' }
     ];
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
 
 
 
@@ -21,7 +27,7 @@ const Header = () => {
             <div className='bg-black w-full lg:hidden'>
                 <div className='px-4 flex justify-between items-center py-4'>
 
-                    <div className='font-bold text-white'>SYR <span className='text-primary'>AFRICA</span> </div>
+                    <div className='font-bold text-white'>{t('syr')} <span className='text-primary'>{t('africa')}</span> </div>
 
                     <button onClick={() => setIsSidebarOpen(true)}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" className="size-8">
@@ -42,10 +48,26 @@ const Header = () => {
                         </li>
                     ))}
                 </ul>
-                <NavLink to={"/contact"} className={"flex  font-medium hover:bg-white justify-center gap-2 items-center  bg-primary px-4 lg:px-8 py-2 lg:py-4 text-sm lg:text-base"} >
-                    <span>Get a  Quote</span>
-                    <ArrowRightIcon className="w-4  lg:w-5 h-5" />
-                </NavLink>
+                <div className="flex items-center gap-2">
+                    <div className="flex bg-gray-800  p-1">
+                        <button
+                            onClick={() => changeLanguage('en')}
+                            className={`px-3 py-1 text-sm  transition-colors ${i18n.language === 'en' ? 'bg-primary text-white' : 'text-gray-300 hover:text-white'}`}
+                        >
+                            EN
+                        </button>
+                        <button
+                            onClick={() => changeLanguage('fr')}
+                            className={`px-3 py-1 text-sm  transition-colors ${i18n.language === 'fr' ? 'bg-primary text-white' : 'text-gray-300 hover:text-white'}`}
+                        >
+                            FR
+                        </button>
+                    </div>
+                    <NavLink to={"/contact"} className={"flex  font-medium hover:bg-white justify-center gap-2 items-center  bg-primary px-4 lg:px-8 py-2 lg:py-4 text-sm lg:text-base"} >
+                        <span>{t('getQuote')}</span>
+                        <ArrowRightIcon className="w-4  lg:w-5 h-5" />
+                    </NavLink>
+                </div>
 
             </div>
 
@@ -55,7 +77,7 @@ const Header = () => {
                     <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setIsSidebarOpen(false)}></div>
                     <div className="absolute top-0 right-0 w-64 h-full bg-black  w-full shadow-lg transform transition-transform duration-300 ease-in-out">
                         <div className="flex justify-between items-center p-4 border-b border-gray-700">
-                            <div className='font-bold text-white'>SYR <span className='text-primary'>AFRICA</span></div>
+                            <div className='font-bold text-white'>{t('syr')} <span className='text-primary'>{t('africa')}</span></div>
                             <button onClick={() => setIsSidebarOpen(false)} className="text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="size-6">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -90,9 +112,23 @@ const Header = () => {
                                 </li>
                             ))}
                         </ul>
-                        <div className="p-4 border-t border-gray-700">
+                        <div className="p-4 border-t h-full border-gray-700 space-y-4">
+                            <div className="flex justify-center e-full gap-2">
+                                <button
+                                    onClick={() => changeLanguage('en')}
+                                    className={`px-4 py-2 text-sm  md:w-auto w-1/2 transition-colors ${i18n.language === 'en' ? 'bg-primary text-white' : 'bg-gray-700 text-gray-300 hover:text-white'}`}
+                                >
+                                    EN
+                                </button>
+                                <button
+                                    onClick={() => changeLanguage('fr')}
+                                    className={`px-4 py-2 text-sm  md:w-auto w-1/2  transition-colors ${i18n.language === 'fr' ? 'bg-primary text-white' : 'bg-gray-700 text-gray-300 hover:text-white'}`}
+                                >
+                                    FR
+                                </button>
+                            </div>
                             <NavLink to={"/contact"} className={"flex font-medium hover:bg-white justify-center gap-2 items-center bg-primary px-4 py-2 text-base"} onClick={() => setIsSidebarOpen(false)}>
-                                <span>Get a Quote</span>
+                                <span>{t('getQuote')}</span>
                                 <ArrowRightIcon className="w-4 h-5" />
                             </NavLink>
                         </div>

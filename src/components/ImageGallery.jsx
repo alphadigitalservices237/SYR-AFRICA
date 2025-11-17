@@ -183,7 +183,7 @@ const ImageGallery = ({ images }) => {
       </div>
       <div
         ref={thumbnailsContainerRef}
-        className="flex gap-4  justify-center items-center mt-4 w-full overflow-x-auto scrollbar-hide"
+        className=" gap-4  justify-center items-center mt-4 w-full hidden  lg:flex  overflow-x-auto scrollbar-hide"
         style={{ scrollBehavior: "smooth", msOverflowStyle: "none", scrollbarWidth: "none" }}
       >
         <style>

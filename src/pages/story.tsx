@@ -14,7 +14,7 @@ const Story = () => {
             </div>
             <Phylosophie />
             
-      <div className="w-full  bg-black  text-white flex  px-4 xl:px-44  m-0 p-0 justify-between items-center flex-col-reverse lg:flex-row">
+      <div className="w-full  bg-black  text-white flex    m-0 p-0 justify-between items-center flex-col-reverse lg:flex-row">
             <Missions />
 </div>
             <Values/>

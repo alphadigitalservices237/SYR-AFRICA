@@ -2,14 +2,16 @@
 import { ArrowLeft, ChevronLeft } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
+    const { t } = useTranslation();
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const images = [
-        '/hero.png',
-        '/hero2.jpg',
-        '/hero3.jpg'
+        '/Construction métallique à Douala/1.jpeg',
+        '/Charpente City Stade FEICOM/1.jpeg',
+        '/st josue/1.jpg'
     ];
 
     const nextImage = () => {
@@ -46,8 +48,8 @@ const HeroSection = () => {
                         <div className='w-full hidden lg:flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 lg:gap-0'>
 
                             <div className='border-l-2 border-primary px-4   flex max-w-md gap-2 flex-col justify-start items-start'>
-                                <h2 className='text-sm lg:text-base text-primary font-bold'>ABCD Metallic Construction</h2>
-                                <p className='text-sm lg:text-base text-white'>We are SYR AFRICA, a company specialised in mettalic construction and building. We are registered</p>
+                                <h2 className='text-sm lg:text-base text-primary font-bold'>{t("companyTitle")}</h2>
+                                <p className='text-sm lg:text-base text-white'>{t("companyDescription")}</p>
                             </div>
                             <div className='flex justify-center gap-2 items-center'>
 
@@ -97,8 +99,8 @@ const HeroSection = () => {
                        <div className='w-full  relative  px-4 flex lg:hidden flex-col lg:flex-row justify-start items-start lg:items-center gap-4 lg:gap-0'>
 
                             <div className='border-l-2 border-primary px-4   flex max-w-md gap-2 flex-col justify-start items-start'>
-                                <h2 className='text-sm lg:text-base text-primary font-bold'>ABCD Metallic Construction</h2>
-                                <p className='text-sm lg:text-base text-black'>We are SYR AFRICA, a company specialised in mettalic construction and building. We are registered</p>
+                                <h2 className='text-sm lg:text-base text-primary font-bold'>{t("companyTitle")}</h2>
+                                <p className='text-sm lg:text-base text-black'>{t("companyDescription")}</p>
                             </div>
                             <div className='flex justify-end w-full gap-2 items-center'>
 

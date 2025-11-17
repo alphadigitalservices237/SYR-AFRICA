@@ -1,50 +1,52 @@
 import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin, Twitter } from "lucide-react";
 import { NavLink, useLocation } from "react-router";
 import CTA from "./CTA";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const isContactPage = location.pathname === '/contact';
 
   const fastLinkTab = [
     {
       link: "/",
-      title: "Home",
+      title: t("homeFooter"),
     },
     {
       link: "/#projects",
-      title: "Projects",
+      title: t("projectsFooter"),
     },
     {
       link: "/#services",
-      title: "Services",
+      title: t("servicesFooter"),
     },
     {
       link: "/#about",
-      title: "Story",
+      title: t("storyFooter"),
     },
     {
       link: "/#contact",
-      title: "Contact",
+      title: t("contactFooter"),
     },
   ];
 
   const OurServicesLinkTab = [
     {
       link: "/#services",
-      title: "Terms & Services",
+      title: t("termsServices"),
     },
     {
       link: "/#services",
-      title: "Licensing",
+      title: t("licensing"),
     },
     {
       link: "/#services",
-      title: "FAQs",
+      title: t("faqs"),
     },
     {
       link: "/#services",
-      title: "Legal Disclosure",
+      title: t("legalDisclosure"),
     },
   ];
 
@@ -165,7 +167,7 @@ const Footer = () => {
 
           {/* Ressources (hidden on mobile) */}
           <div className="hidden md:flex flex-col gap-y-6">
-            <h3 className="text-sm font-medium  underline underline-offset-8 pb-8">Ressources</h3>
+            <h3 className="text-sm font-medium  underline underline-offset-8 pb-8">{t("resources")}</h3>
             <ul className="flex gap-y-3 justify-start items-start flex-col text-sm text-white font-light">
               {OurServicesLinkTab?.map((link, index) => (
                 <li key={"service" + index}>
@@ -177,16 +179,16 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="flex flex-col gap-y-6">
-            <h3 className="text-sm font-medium  underline underline-offset-8 pb-8">Contact</h3>
+            <h3 className="text-sm font-medium  underline underline-offset-8 pb-8">{t("contactFooterTitle")}</h3>
             <div className="flex flex-col justify-start items-start ">
 
-              <span className="text-white text-xs lg:text-sm">Phone</span>
+              <span className="text-white text-xs lg:text-sm">{t("phone")}</span>
               <div className="flex items-center gap-x-2 text-xs lg:text-sm">
                 <Phone className="size-3 lg:size-4 text-primary flex-shrink-0" />
                 <span className="font-medium text-primary">(+237) 659 312 616 </span>
               </div>
 
-              <span className="text-white text-xs lg:text-sm pt-4">Email</span>
+              <span className="text-white text-xs lg:text-sm pt-4">{t("email")}</span>
               <div className="flex items-center gap-x-2 text-xs lg:text-sm">
                 <Mail className="size-3 lg:size-4 text-primary flex-shrink-0" />
                 <span className="font-medium text-primary">syrafrica@gmail.com</span>
@@ -198,7 +200,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between items-center py-4 lg:py-6 px-4 xl:px-44 w-full max-w-[1450px] gap-4 lg:gap-0">
-        <span className="text-xs lg:text-sm text-white  w-full text-left">SYR Africa Copyright @2025 All Right Reserve</span>
+        <span className="text-xs lg:text-sm text-white  w-full text-left">{t("copyright")}</span>
         <div className="flex justify-center lg:justify-end gap-x-4 lg:gap-x-6 items-center">
 
         </div>

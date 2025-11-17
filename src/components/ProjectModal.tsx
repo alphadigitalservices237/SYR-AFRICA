@@ -2,11 +2,13 @@ import React from 'react'
 import { NavLink } from 'react-router'
 import ProjectGallery from './ProjectGallery'
 import { ArrowRightIcon } from 'lucide-react'
+import { useTranslation } from 'react-i18next';
 
 const ProjectModal = ({ project, isOpen, onClose }: { project: any, isOpen: boolean, onClose: () => void }) => {
+    const { t } = useTranslation();
     if (!isOpen) return null
 
-    const images = [
+    const images = project.images || [
         project.image,
         '/gallery1.png',
         '/gallery2.png',
@@ -57,7 +59,7 @@ const ProjectModal = ({ project, isOpen, onClose }: { project: any, isOpen: bool
 
                     </div>
                     <NavLink to={"/contact"} className={"flex  mb-5  lg:mb-0 font-medium  text-black w-full hover:bg-white justify-center gap-2 items-center  bg-primary px-4 lg:px-8 py-4 lg:py-4 text-sm lg:text-base"} >
-                        <span>Get a  Quote</span>
+                        <span>{t('getQuote')}</span>
                         <ArrowRightIcon className="w-4  lg:w-5 h-5" />
                     </NavLink>
                 </div>

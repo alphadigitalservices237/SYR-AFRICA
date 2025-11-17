@@ -1,31 +1,33 @@
 
 import TestimonialCard from './testimonialCard';
+import { useTranslation } from 'react-i18next';
 
 const Testimonials = () => {
+    const { t } = useTranslation();
     const testimonials = [
         {
-            name: "John Doe",
-            position: "CEO, Example Corp",
-            text: "« Intervention impeccable pour la rénovation de notre hangar industriel : structure robuste, finition soignée et suivi technique irréprochable. »",
-            avatar: "/hero.png"
+            name: t("testimonial1Name"),
+            position: t("testimonial1Position"),
+            text: t("testimonial1Text"),
+            avatar: "/st josue/1.jpg"
         },
         {
-            name: "Jane Smith",
-            position: "Directrice, Tech Solutions",
-            text: "« Service professionnel et efficace. Notre projet de construction a été livré dans les délais avec une qualité exceptionnelle. »",
-            avatar: "/hero2.jpg"
+            name: t("testimonial2Name"),
+            position: t("testimonial2Position"),
+            text: t("testimonial2Text"),
+            avatar: "/Charpente City Stade FEICOM/1.jpeg"
         },
         {
-            name: "Mike Johnson",
-            position: "Propriétaire, MJ Construction",
-            text: "« Équipe compétente et à l'écoute. Ils ont su répondre à toutes nos exigences techniques avec créativité. »",
-            avatar: "/hero3.jpg"
+            name: t("testimonial3Name"),
+            position: t("testimonial3Position"),
+            text: t("testimonial3Text"),
+            avatar: "/Construction métallique à Douala/1.jpeg"
         },
         {
-            name: "Sarah Wilson",
-            position: "Manager, Green Building",
-            text: "« Projet écologique réalisé avec expertise. Respect des normes environnementales et résultat durable. »",
-            avatar: "/hero4.jpg"
+            name: t("testimonial4Name"),
+            position: t("testimonial4Position"),
+            text: t("testimonial4Text"),
+            avatar: "/Gaz a jourdin/1.jpeg"
         }
     ];
 
@@ -34,7 +36,7 @@ const Testimonials = () => {
             <div className="w-full max-w-[1450px] px-4  xl:px-44">
                 <div className="text-center mb-10 lg:mb-20">
                     <h2 className="text-2xl  lg:text-4xl xl:text-5xl font-medium text-white">
-                        What our <span className="text-primary">clients</span> say ?
+                        {t("whatOurClientsSay")}
                     </h2>
                 </div>
 
