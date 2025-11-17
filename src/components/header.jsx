@@ -29,11 +29,27 @@ const Header = () => {
 
                     <div className='font-bold text-white'>{t('syr')} <span className='text-primary'>{t('africa')}</span> </div>
 
-                    <button onClick={() => setIsSidebarOpen(true)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" className="size-8">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                    </button>
+                    <div className="flex items-center gap-2">
+                        <div className="flex bg-gray-800 p-1">
+                            <button
+                                onClick={() => changeLanguage('en')}
+                                className={`px-2 py-1 text-xs transition-colors ${i18n.language === 'en' ? 'bg-primary text-white' : 'text-gray-300 hover:text-white'}`}
+                            >
+                                EN
+                            </button>
+                            <button
+                                onClick={() => changeLanguage('fr')}
+                                className={`px-2 py-1 text-xs transition-colors ${i18n.language === 'fr' ? 'bg-primary text-white' : 'text-gray-300 hover:text-white'}`}
+                            >
+                                FR
+                            </button>
+                        </div>
+                        <button onClick={() => setIsSidebarOpen(true)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" className="size-8">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+                    </div>
 
                 </div>
             </div>

@@ -15,7 +15,7 @@ const Footer = () => {
     },
     {
       link: "/#projects",
-      title: t("projectsFooter"),
+    title: t("projectsFooter"),
     },
     {
       link: "/#services",
@@ -191,7 +191,7 @@ const Footer = () => {
               <span className="text-white text-xs lg:text-sm pt-4">{t("email")}</span>
               <div className="flex items-center gap-x-2 text-xs lg:text-sm">
                 <Mail className="size-3 lg:size-4 text-primary flex-shrink-0" />
-                <span className="font-medium text-primary">syrafrica@gmail.com</span>
+                <span className="font-medium text-primary">syrafrica_cameroon@yahoo.com</span>
               </div>
             </div>
           </div>

@@ -42,6 +42,8 @@
   "sending": "Sending...",
   "getQuote": "Get a Quote",
   "messageSent": "Quote submitted successfully",
+  "thankYouMessage": "Thank you for your message. We will get back to you soon!",
+  "sendAnotherMessage": "Send Another Message",
   "errorSending": "An error occurred while sending the message",
   "home": "Home",
   "story": "Story",

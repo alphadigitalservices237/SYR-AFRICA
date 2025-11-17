@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 const Contact = () => {
    const { t } = useTranslation();
    const [loading, setLoading] = React.useState(false);
+   const [isSubmitted, setIsSubmitted] = React.useState(false);
 
    const categories = [
        {
@@ -122,7 +123,7 @@ const Contact = () => {
       .then(() => {
         setLoading(false);
         reset();
-        toast.success(t("messageSent"));
+        setIsSubmitted(true);
       })
       .catch((error) => {
         console.log("Error:", error);
@@ -152,7 +153,23 @@ const Contact = () => {
 
       <div className="lg:py-12  lg:px-8">
         <div className="max-w-3xl lg:mx-auto">
-       
+        {isSubmitted ? (
+          <div className="text-center p-8 lg:p-16">
+            <div className="mb-6">
+              <svg className="mx-auto h-16 w-16 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-semibold text-[#B58000] mb-4">{t("messageSent")}</h2>
+            <p className="text-gray-600 mb-6">{t("thankYouMessage")}</p>
+            <button
+              onClick={() => setIsSubmitted(false)}
+              className="bg-primary hover:bg-black hover:text-white text-white px-6 py-3 rounded-md font-medium transition-colors"
+            >
+              {t("sendAnotherMessage")}
+            </button>
+          </div>
+        ) : (
         <form onSubmit={handleSubmit(onSubmit)} className="  lg:mb-56 p-4 lg:p-8 space-y-8">
      
           <div className=" pb-6">
@@ -388,6 +405,7 @@ const Contact = () => {
            </button>
           </div>
         </form>
+        )}
         </div>
       </div>
     </div>

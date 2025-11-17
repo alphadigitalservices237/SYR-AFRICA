@@ -42,6 +42,8 @@
   "sending": "Envoi en cours...",
   "getQuote": "Obtenir un devis",
   "messageSent": "Message envoyé avec succès",
+  "thankYouMessage": "Merci pour votre message. Nous vous contacterons bientôt !",
+  "sendAnotherMessage": "Envoyer un autre message",
   "errorSending": "Une erreur s'est produite lors de l'envoi du message",
   "home": "Accueil",
   "story": "Histoire",
