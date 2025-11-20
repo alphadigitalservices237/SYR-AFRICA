@@ -55,7 +55,7 @@ const Team = () => {
 
 
                         <div className='w-full lg:w-1/2 bg-white h-72 flex flex-col gap-4'>
-                            <img src="/st josue/4.png" className="h-full w-full object-cover" />
+                            <img src="/st josue/21.png" className="h-full w-full object-cover" />
                         </div>
 
 

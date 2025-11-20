@@ -153,12 +153,8 @@ const ProjetsPage = () => {
             images: [
                 '/st josue/1.jpg',
                 '/st josue/2.jpg',
-                '/st josue/3.png',
-                '/st josue/4.png',
                 '/st josue/6.jpg',
                 '/st josue/7.jpg',
-                '/st josue/8.png',
-                '/st josue/9.png',
                 '/st josue/10.jpg',
                 '/st josue/11.jpg',
                 '/st josue/12.jpg',
@@ -168,7 +164,6 @@ const ProjetsPage = () => {
                 '/st josue/16.jpg',
                 '/st josue/17.jpg',
                 '/st josue/18.jpg',
-                '/st josue/19.png',
                 '/st josue/20.jpg',
                 '/st josue/21.jpg'
             ]
