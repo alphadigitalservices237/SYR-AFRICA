@@ -14,19 +14,19 @@ const Footer = () => {
       title: t("homeFooter"),
     },
     {
-      link: "/#projects",
+      link: "/projets",
     title: t("projectsFooter"),
     },
     {
-      link: "/#services",
+      link: "/services",
       title: t("servicesFooter"),
     },
     {
-      link: "/#about",
+      link: "/story",
       title: t("storyFooter"),
     },
     {
-      link: "/#contact",
+      link: "/contact",
       title: t("contactFooter"),
     },
   ];
@@ -159,7 +159,7 @@ const Footer = () => {
             <ul className="flex gap-y-3 justify-start items-start flex-col text-sm text-white font-light">
               {fastLinkTab?.map((link, index) => (
                 <li key={"fastlink" + index}>
-                  <a className="hover:text-primary transition-colors" href={link.link}>{link.title}</a>
+                  <NavLink to={link.link} className="hover:text-primary transition-colors">{link.title}</NavLink>
                 </li>
               ))}
             </ul>
@@ -167,14 +167,7 @@ const Footer = () => {
 
           {/* Ressources (hidden on mobile) */}
           <div className="hidden md:flex flex-col gap-y-6">
-            <h3 className="text-sm font-medium  underline underline-offset-8 pb-8">{t("resources")}</h3>
-            <ul className="flex gap-y-3 justify-start items-start flex-col text-sm text-white font-light">
-              {OurServicesLinkTab?.map((link, index) => (
-                <li key={"service" + index}>
-                  <a className="hover:text-primary transition-colors" href={link.link}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
+          
           </div>
 
           {/* Contact Info */}
@@ -191,7 +184,7 @@ const Footer = () => {
               <span className="text-white text-xs lg:text-sm pt-4">{t("email")}</span>
               <div className="flex items-center gap-x-2 text-xs lg:text-sm">
                 <Mail className="size-3 lg:size-4 text-primary flex-shrink-0" />
-                <span className="font-medium text-primary">syrafrica_cameroon@yahoo.com</span>
+                <span className="font-medium text-primary">syrafrica_cameroun@yahoo.com</span>
               </div>
             </div>
           </div>

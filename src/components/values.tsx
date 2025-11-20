@@ -80,7 +80,7 @@ const Values = () => {
     return (
         <div className='w-full flex flex-col gap-1  justify-start items-center py-15  bg-white/90 min-h-screen relative'>
 
-            <img  src="/La Tour de Savons en poudre/1.jpeg" className="absolute top-0 left-0 w-full h-full object-cover opacity-10 z-0" />
+            <img  src="/embeddings style/WhatsApp Image 2025-11-16 at 14.27.23 (2).jpeg" className="absolute top-0 left-0 w-full h-full object-cover opacity-10 z-0" />
 
             <div className="w-full flex max-w-[1450px] px-4 xl:px-44 gap-8 m-0 p-0 justify-between items-start lg:items-center flex-col lg:flex-row">
                 <span className="border-l-2  border-primary text-black gap-2 pl-3 font-bold">{t("vision")}</span>

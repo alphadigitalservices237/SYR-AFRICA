@@ -246,7 +246,7 @@ const ImageGallery = ({ images }) => {
         <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50" onClick={() => setIsModalOpen(false)}>
           <div className="relative flex items-center justify-center w-full h-full p-4">
             <button
-              className="absolute top-10 cursor-pointer right-2 text-whit20 p-2 transition-all duration-300"
+              className="absolute top-10 cursor-pointer right-2 text-white p-2 transition-all duration-300"
               onClick={() => setIsModalOpen(false)}
               aria-label="Fermer la modale"
             >
@@ -265,12 +265,64 @@ const ImageGallery = ({ images }) => {
                 />
               </svg>
             </button>
+            <button
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-4 transition-all duration-300 hover:bg-white/10 rounded-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                const currentIndex = images.indexOf(modalImage);
+                const prevIndex = (currentIndex - 1 + images.length) % images.length;
+                setModalImage(images[prevIndex]);
+              }}
+              aria-label="Image précédente"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
             <img
               src={modalImage}
               alt="Image agrandie"
-              className="max-w-[90vw] max-h-[80vh] object-contain"
+              className="max-w-[80vw] max-h-[80vh] object-contain"
               onClick={(e) => e.stopPropagation()}
             />
+            <button
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white p-4 transition-all duration-300 hover:bg-white/10 rounded-full"
+              onClick={(e) => {
+                e.stopPropagation();
+                const currentIndex = images.indexOf(modalImage);
+                const nextIndex = (currentIndex + 1) % images.length;
+                setModalImage(images[nextIndex]);
+              }}
+              aria-label="Image suivante"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-70 text-white px-4 py-2 rounded">
               {images.indexOf(modalImage) + 1} / {images.length}
             </div>

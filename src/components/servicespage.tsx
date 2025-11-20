@@ -14,56 +14,56 @@ const Servicespage = () => {
             key: 'metalConstruction',
             name: t('metalConstructionFabrication'),
             services: [
-                { name: t('structuralSteelFabricationName'), description: t('structuralSteelFabricationDesc'), image: '/hero2.jpg' },
-                { name: t('weldingServicesName'), description: t('weldingServicesDesc'), image: '/hero2.jpg' },
-                { name: t('boilermakingForgingName'), description: t('boilermakingForgingDesc'), image: '/hero2.jpg' },
-                { name: t('metalFabricationName'), description: t('metalFabricationDesc'), image: '/hero2.jpg' },
-                { name: t('generalMetalFabricationName'), description: t('generalMetalFabricationDesc'), image: '/hero2.jpg' },
-                { name: t('alucobondInstallationName'), description: t('alucobondInstallationDesc'), image: '/hero2.jpg' },
-                { name: t('workWithSteelName'), description: t('workWithSteelDesc'), image: '/hero2.jpg' },
-                { name: t('manufacturingAssemblyName'), description: t('manufacturingAssemblyDesc'), image: '/hero2.jpg' },
-                { name: t('hangarsTanksName'), description: t('hangarsTanksDesc'), image: '/hero2.jpg' },
-                { name: t('manufacturingAssemblyHangarsName'), description: t('manufacturingAssemblyHangarsDesc'), image: '/hero2.jpg' },
-                { name: t('manufacturingVariousTanksName'), description: t('manufacturingVariousTanksDesc'), image: '/hero2.jpg' }
+                { name: t('structuralSteelFabricationName'), description: t('structuralSteelFabricationDesc'), image: '/construction metalique/3.jpeg' },
+                { name: t('weldingServicesName'), description: t('weldingServicesDesc'), image: '/construction metalique/4.jpeg' },
+                { name: t('boilermakingForgingName'), description: t('boilermakingForgingDesc'), image: '/construction metalique/5.jpeg' },
+                { name: t('metalFabricationName'), description: t('metalFabricationDesc'), image: '/construction metalique/6.jpeg' },
+                { name: t('generalMetalFabricationName'), description: t('generalMetalFabricationDesc'), image: '/construction metalique/8.jpeg' },
+                { name: t('alucobondInstallationName'), description: t('alucobondInstallationDesc'), image: '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.26.jpeg' },
+                { name: t('workWithSteelName'), description: t('workWithSteelDesc'), image: '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.32.jpeg' },
+                { name: t('manufacturingAssemblyName'), description: t('manufacturingAssemblyDesc'), image: '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.32.jpeg' },
+                { name: t('hangarsTanksName'), description: t('hangarsTanksDesc'), image: '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.33.jpeg' },
+                { name: t('manufacturingAssemblyHangarsName'), description: t('manufacturingAssemblyHangarsDesc'), image: '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.34.jpeg' },
+                { name: t('manufacturingVariousTanksName'), description: t('manufacturingVariousTanksDesc'), image: '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.35.jpeg' }
             ]
         },
         {
             key: 'industrialSystems',
             name: t('industrialSystemsEquipment'),
             services: [
-                { name: t('conveyorSystemsName'), description: t('conveyorSystemsDesc'), image: '/hero3.jpg' },
-                { name: t('processEquipmentName'), description: t('processEquipmentDesc'), image: '/hero3.jpg' },
-                { name: t('elevatorsHoistsName'), description: t('elevatorsHoistsDesc'), image: '/hero3.jpg' },
-                { name: t('pipingServicesName'), description: t('pipingServicesDesc'), image: '/hero3.jpg' },
-                { name: t('overheadCranesName'), description: t('overheadCranesDesc'), image: '/hero3.jpg' }
+                { name: t('conveyorSystemsName'), description: t('conveyorSystemsDesc'), image: '/pont roulant/1.jpeg' },
+                { name: t('processEquipmentName'), description: t('processEquipmentDesc'), image: '/pont roulant/7.jpeg' },
+                { name: t('elevatorsHoistsName'), description: t('elevatorsHoistsDesc'), image: '/pont roulant/9.jpeg' },
+                { name: t('pipingServicesName'), description: t('pipingServicesDesc'), image: '/tuyauterie/1.jpeg' },
+                { name: t('overheadCranesName'), description: t('overheadCranesDesc'), image: '/pont roulant/10.jpeg' }
             ]
         },
         {
             key: 'architecturalMetalworks',
             name: t('architecturalMetalworks'),
             services: [
-                { name: t('facadeSystemsName'), description: t('facadeSystemsDesc'), image: '/hero4.jpg' },
-                { name: t('staircasesRailingsName'), description: t('staircasesRailingsDesc'), image: '/hero4.jpg' },
-                { name: t('fabricationVariousWorksName'), description: t('fabricationVariousWorksDesc'), image: '/hero4.jpg' },
-                { name: t('metalCarpentryName'), description: t('metalCarpentryDesc'), image: '/hero4.jpg' }
+                { name: t('facadeSystemsName'), description: t('facadeSystemsDesc'), image: '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.23 (2).jpeg' },
+                { name: t('staircasesRailingsName'), description: t('staircasesRailingsDesc'), image: '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.24 (1).jpeg' },
+                { name: t('fabricationVariousWorksName'), description: t('fabricationVariousWorksDesc'), image: '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.27.jpeg' },
+                { name: t('metalCarpentryName'), description: t('metalCarpentryDesc'), image: '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.29.jpeg' }
             ]
         },
         {
             key: 'marineMaintenance',
             name: t('marineMaintenanceServices'),
             services: [
-                { name: t('shipRepairName'), description: t('shipRepairDesc'), image: '/hero2.jpg' },
-                { name: t('offshoreStructuresName'), description: t('offshoreStructuresDesc'), image: '/hero2.jpg' },
-                { name: t('navalServicesName'), description: t('navalServicesDesc'), image: '/hero2.jpg' },
-                { name: t('navalMaintenanceName'), description: t('navalMaintenanceDesc'), image: '/hero2.jpg' }
+                { name: t('shipRepairName'), description: t('shipRepairDesc'), image: '/construction de citerne/1.jpeg' },
+                { name: t('offshoreStructuresName'), description: t('offshoreStructuresDesc'), image: '/Charpente City Stade FEICOM/2.jpeg' },
+                { name: t('navalServicesName'), description: t('navalServicesDesc'), image: '/construction de citerne/WhatsApp Image 2025-11-16 at 14.27.17.jpeg' },
+                { name: t('navalMaintenanceName'), description: t('navalMaintenanceDesc'), image: '/Charpente City Stade FEICOM/3.jpeg' }
             ]
         },
         {
             key: 'safetySecurity',
             name: t('safetySecuritySystems'),
             services: [
-                { name: t('securitySystemsName'), description: t('securitySystemsDesc'), image: '/hero2.jpg' },
-                { name: t('fireSafetySystemsName'), description: t('fireSafetySystemsDesc'), image: '/hero2.jpg' }
+                { name: t('securitySystemsName'), description: t('securitySystemsDesc'), image: '/Mayonnaise ROMA/1.jpeg' },
+                { name: t('fireSafetySystemsName'), description: t('fireSafetySystemsDesc'), image: '/Mayonnaise ROMA/2.jpeg' }
             ]
         }
     ];
@@ -72,7 +72,8 @@ const Servicespage = () => {
         <div className='min-h-screen flex-col  w-full flex justify-start items-start'>
             <div className='relative  w-full -top-[56px] h-[50vh]  object-cover '>
 
-                <img src={"./hero2.jpg"} className='relative z-0 flex h-full w-full  object-cover justify-center items-center' />
+                <img src={"/construction metalique/WhatsApp Image 2025-11-16 at 14.27.36.jpeg"} className='relative z-0 flex h-full w-full  object-cover justify-center items-center' />
+               
             </div>
 
             <section className="flex justify-start xl:justify-center z-10      pb-8 xl:pb-30 items-center w-full">

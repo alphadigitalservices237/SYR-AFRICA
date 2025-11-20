@@ -8,9 +8,9 @@ const Story = () => {
     return (
         <div className="relative  min-h-screen flex flex-col justify-start items-start w-full ">
   
-            <div className='relative  w-full -top-[56px] h-[50vh]  object-cover '>
-
-                <img src={"./hero2.jpg"} className='relative z-0 flex h-full w-full  object-cover justify-center items-center' />
+            <div className='relative  w-full -top-[56px] h-[50vh]  object-cover bg-primary'>
+                <img src={"/st josue/1.jpg"} className='relative z-0 flex h-full w-full  object-cover justify-center items-center' />
+               
             </div>
             <Phylosophie />
             

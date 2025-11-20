@@ -41,7 +41,7 @@ const Team = () => {
 
 
                         <div className='w-full lg:w-1/2 bg-white h-72 flex flex-col gap-4'>
-                            <img src="/Charpente City Stade FEICOM/1.jpeg" className="h-full w-full object-cover" />
+                            <img src="/st josue/2.jpg" className="h-full w-full object-cover" />
                         </div>
 
 
@@ -50,19 +50,19 @@ const Team = () => {
                     <div className='w-full flex md:flex-row  flex-col gap-8 justify-start items-center'>
 
                         <div className='w-full lg:w-1/2 bg-white h-72 flex flex-col gap-4'>
-                            <img src="/Construction métallique à Douala/1.jpeg" className="h-full w-full object-cover" />
+                            <img src="/st josue/3.jpg" className="h-full w-full object-cover" />
                         </div>
 
 
                         <div className='w-full lg:w-1/2 bg-white h-72 flex flex-col gap-4'>
-                            <img src="/Gaz a jourdin/1.jpeg" className="h-full w-full object-cover" />
+                            <img src="/st josue/4.jpg" className="h-full w-full object-cover" />
                         </div>
 
 
                     </div>
 
                     <div className=' w-full bg-white   lg:mb-56 h-72 flex flex-col gap-4'>
-                        <img src="/La Tour de Savons en poudre/1.jpeg" className="h-full w-full object-cover" />
+                        <img src="/st josue/6.jpg" className="h-full w-full object-cover" />
                     </div>
 
                 </div>

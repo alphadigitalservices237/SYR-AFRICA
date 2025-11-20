@@ -1,5 +1,5 @@
 import { NavLink } from "react-router"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useTranslation } from 'react-i18next';
@@ -10,6 +10,17 @@ gsap.registerPlugin(ScrollTrigger)
 const Services = () => {
     const { t } = useTranslation();
     const servicesRef = useRef(null)
+    const [currentPage, setCurrentPage] = useState(0);
+
+    const maxPage = Math.ceil(5 / 3) - 1; // 1 page (0 and 1)
+
+    const scrollLeft = () => {
+        setCurrentPage((prev) => Math.max(0, prev - 1));
+    };
+
+    const scrollRight = () => {
+        setCurrentPage((prev) => Math.min(maxPage, prev + 1));
+    };
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -62,32 +73,79 @@ const Services = () => {
                         </NavLink>
 
                     </div>
-                    <div className="flex lg:grid lg:grid-cols-3 w-full gap-4 lg:gap-6 mt-8 lg:mt-10  h-[350px] lg:h-[450px] -mb-20 overflow-x-auto lg:overflow-visible">
-                        <div className="service-card relative bg-cover bg-[url('/hero2.jpg')] w-[300px] lg:w-full h-full flex-shrink-0">
-                            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
-                            <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
-                                <h4 className="text-white w-full text-xl lg:text-2xl">{t("metalConstructionFabrication")}</h4>
-                                <p className="text-[#C8C8C8] max-w-xs text-sm lg:text-base">
-                                  {t("metalConstructionDesc")}
-                                </p>
+                    <div className="flex justify-center items-center gap-4 mt-4">
+                        <button onClick={scrollLeft} className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button onClick={scrollRight} className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div className="flex w-full gap-4 lg:gap-6 mt-8 lg:mt-10 h-[350px] lg:h-[450px] -mb-20 overflow-hidden">
+                        <div className="flex gap-4 lg:gap-6 transition-transform duration-300" style={{ transform: `translateX(-${currentPage * 932}px)` }}>
+                            <div
+                                className="service-card relative bg-cover bg-center w-[300px] h-full flex-shrink-0"
+                                style={{ backgroundImage: "url('/construction de citerne/1.jpeg')" }}
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
+                                <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
+                                    <h4 className="text-white w-full text-xl lg:text-2xl">{t("generalConstruction")}</h4>
+                                    <p className="text-[#C8C8C8] max-w-xs text-sm lg:text-base">
+                                      {t("generalConstructionDesc")}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                          <div className="service-card relative bg-cover bg-[url('/hero3.jpg')] w-[300px] lg:w-full h-full flex-shrink-0">
-                            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
-                            <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
-                                <h4 className="text-white w-full text-xl lg:text-2xl">{t("industrialSystemsEquipment")}</h4>
-                                <p className="text-[#C8C8C8] max-w-xs text-sm lg:text-base">
-                                    {t("industrialSystemsDesc")}
-                                </p>
+                              <div
+                                  className="service-card relative bg-cover bg-center w-[300px] h-full flex-shrink-0"
+                                  style={{ backgroundImage: "url('/construction metalique/3.jpeg')" }}
+                              >
+                                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
+                                <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
+                                    <h4 className="text-white w-full text-xl lg:text-2xl">{t("metalConstruction")}</h4>
+                                    <p className="text-[#C8C8C8] max-w-xs text-sm lg:text-base">
+                                        {t("metalConstructionDesc")}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                          <div className="service-card relative bg-cover bg-[url('/hero4.jpg')] w-[300px] lg:w-full h-full flex-shrink-0">
-                            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
-                            <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
-                                <h4 className="text-white w-full text-xl lg:text-2xl">{t("architecturalMetalworks")}</h4>
-                                <p className="text-[#C8C8C8] max-w-xs text-sm lg:text-base">
-                                    {t("architecturalMetalworksDesc")}
-                                </p>
+                              <div
+                                  className="service-card relative bg-cover bg-center w-[300px] h-full flex-shrink-0"
+                                  style={{ backgroundImage: "url('/embeddings style/WhatsApp Image 2025-11-16 at 14.27.23 (2).jpeg')" }}
+                              >
+                                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
+                                <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
+                                    <h4 className="text-white w-full text-xl lg:text-2xl">{t("publicWorks")}</h4>
+                                    <p className="text-[#C8C8C8] max-w-xs text-sm lg:text-base">
+                                        {t("publicWorksDesc")}
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                className="service-card relative bg-cover bg-center w-[300px] h-full flex-shrink-0"
+                                style={{ backgroundImage: "url('/Mayonnaise ROMA/1.jpeg')" }}
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
+                                <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
+                                    <h4 className="text-white w-full text-xl lg:text-2xl">{t("buildingConstruction")}</h4>
+                                    <p className="text-[#C8C8C8] max-w-xs text-sm lg:text-base">
+                                        {t("buildingConstructionDesc")}
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                className="service-card relative bg-cover bg-center w-[300px] h-full flex-shrink-0"
+                                style={{ backgroundImage: "url('/tuyauterie/1.jpeg')" }}
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
+                                <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
+                                    <h4 className="text-white w-full text-xl lg:text-2xl">{t("elevators")}</h4>
+                                    <p className="text-[#C8C8C8] max-w-xs text-sm lg:text-base">
+                                        {t("elevatorsDesc")}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -21,7 +21,7 @@ const ProjectModal = ({ project, isOpen, onClose }: { project: any, isOpen: bool
     return (
         <div className="fixed inset-0 bg-black bg-opacity-90 flex h-screen  overflow-auto pt-8 items-center justify-center z-[9999]" onClick={onClose}>
 
-            <div className="relative w-full h-full p-4 flex max-w-[1450px]  xl:py-36  flex-col lg:flex-row gap-8">
+            <div className="relative w-full h-full p-4 flex max-w-[1450px]    flex-col lg:flex-row gap-8">
                 <button
                     className="absolute top-4 right-4 text-white p-2 z-60"
                     onClick={onClose}
@@ -49,7 +49,7 @@ const ProjectModal = ({ project, isOpen, onClose }: { project: any, isOpen: bool
                     <ProjectGallery images={images} />
                 </div>
 
-                <div className="flex flex-col justify-between h-full items-start gap-4 lg:w-1/2 text-white" onClick={(e) => e.stopPropagation()}>
+                <div className="flex flex-col justify-between h-full   items-start gap-4 lg:w-1/2 text-white" onClick={(e) => e.stopPropagation()}>
                     <div className='block space-y-4 '>
                         <h3 className="text-2xl font-bold">{project.title}</h3>
                         <span className="text-sm font-medium flex-shrink-0 rounded-full  border-2 px-6 py-2 border-gray-light text-white">{project.category}</span>

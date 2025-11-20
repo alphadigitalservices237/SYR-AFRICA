@@ -81,9 +81,9 @@ const ProjectGallery = ({ images }) => {
   }, [currentImage, images]);
 
   return (
-    <div className="flex flex-col w-full h-[650px] mb-8 mt-2 justify-center items-center">
+    <div className="flex flex-col w-full h-[450px] lg:h-[650px] mb-8 mt-2 justify-center items-center">
       <div className="w-full flex justify-center items-center relative">
-        <div className="w-full h-[500px] overflow-hidden">
+        <div className="w-full h-[300px] lg:h-[500px] overflow-hidden">
           <img
             src={currentImage}
             alt="Image principale de la galerie"

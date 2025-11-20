@@ -35,7 +35,7 @@ const Phylosophie = () => {
 
         </div>
         <div className="flex justify-center items-center  lg:h-[509px] md:pt-16   w-full lg:w-1/2 mt-8 md:mt-0">
-          <img src="/La Tour de Savons en poudre/1.jpeg" className="w-full h-full  object-contain" />
+          <img src="/st josue/1.jpg" className="w-full h-full  object-contain" />
         </div>
       </div>
     </section>

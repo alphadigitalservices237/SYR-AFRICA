@@ -62,7 +62,7 @@ const Achievements = () => {
                     </div>
 
                     <div className='grid grid-cols-3 w-full gap-6 lg:gap-0'>
-                        <div className='flex flex-col justify-start gap-3 items-start'>
+                        {/* <div className='flex flex-col justify-start gap-3 items-start'>
 
                             <div className='text-4xl lg:text-6xl flex'> {">"} <h3 ref={el => numberRefs.current[0] = el} className='text-bold text-4xl lg:text-6xl'>50</h3></div>
                             <span className='text-gray-light   text-sm md:text-base lg:text-lg text-balance'>{t("industrialProjects")}</span>
@@ -73,7 +73,7 @@ const Achievements = () => {
                             <div className='text-4xl lg:text-6xl flex'> {">"} <h3 ref={el => numberRefs.current[1] = el} className='text-bold text-4xl lg:text-6xl'>35</h3></div>
                             <span className='text-gray-light   text-sm md:text-base lg:text-lg text-balance'>{t("corporateFacilities")}</span>
 
-                        </div>
+                        </div> */}
                         <div className='flex flex-col justify-start gap-3 items-start'>
 
                             <div className='text-4xl lg:text-6xl flex'> {"+"} <h3 ref={el => numberRefs.current[2] = el} className='text-bold text-4xl lg:text-6xl'>15</h3></div>

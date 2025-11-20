@@ -16,15 +16,15 @@
 
                           <div className="flex flex-col text-primary justify-start items-start gap-4 ">
 
-                            <h2 className="text-lg md:text-xl font-bold text-balance">{t("philosophyTitle")}</h2>
-                            <p className="text-base md:text-lg text-white text-balance">{t("philosophyDescription")}</p>
+                            <h2 className="text-lg md:text-xl font-bold text-balance">{t("missionTitle")}</h2>
+                            <p className="text-base md:text-lg text-white text-balance">{t("missionDescription")}</p>
                 
                           
                           </div>
                 
                         </div>
                         <div className="flex justify-center items-center  lg:h-[509px] md:pt-16   w-full lg:w-1/2 mt-8 md:mt-0">
-                          <img src="/Gaz a jourdin/1.jpeg" className="w-full h-full  object-contain" />
+                          <img src="/construction de citerne/1.jpeg" className="w-full h-full  object-contain" />
                         </div>
                       </div>
                     </section>
@@ -33,7 +33,7 @@
                       <div className="w-full flex max-w-[1450px] px-4 xl:px-44 gap-8 m-0 p-0 justify-between items-center flex-col lg:flex-row">
 
                         <div className="flex justify-center items-center  lg:h-[709px]  w-full lg:w-1/2 mt-8 md:mt-0">
-                          <img src="/Montage De Pont roulant/WhatsApp Image 2025-11-16 at 14.27.30.jpeg" className="w-full h-full lg:h-[709px]  object-contain" />
+                          <img src="/pont roulant/1.jpeg" className="w-full h-full lg:h-[709px]  object-contain" />
                         </div>
 
                         <div className="w-full lg:w-1/2 flex flex-col  gap-8 md:gap-17 justify-between items-start">
@@ -42,8 +42,8 @@
 
                           <div className="flex flex-col justify-start items-start gap-4 ">
 
-                            <h2 className="text-lg md:text-xl font-bold text-primary text-balance">{t("philosophyTitle")}</h2>
-                            <p className="text-base md:text-lg text-white text-balance">{t("philosophyDescription")}</p>
+                            <h2 className="text-lg md:text-xl font-bold text-primary text-balance">{t("visionTitle")}</h2>
+                            <p className="text-base md:text-lg text-white text-balance">{t("visionDescription")}</p>
                 
                            
                           </div>

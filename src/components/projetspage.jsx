@@ -19,30 +19,136 @@ const ProjetsPage = () => {
             title: 'Charpente City Stade FEICOM',
             category: t('boilerMakingForging'),
             description: 'Metal framework construction for City Stade FEICOM - completion works for a city stadium.',
-            image: '/Charpente City Stade FEICOM/1.jpeg',
+            image: '/Charpente City Stade FEICOM/2.jpeg',
             images: [
-                '/Charpente City Stade FEICOM/1.jpeg',
                 '/Charpente City Stade FEICOM/2.jpeg',
                 '/Charpente City Stade FEICOM/3.jpeg',
-                '/Charpente City Stade FEICOM/4.jpeg'
+                '/Charpente City Stade FEICOM/WhatsApp Image 2025-11-18 at 10.55.22.jpeg',
+                '/Charpente City Stade FEICOM/WhatsApp Image 2025-11-18 at 10.56.54.jpeg'
             ]
         },
         {
-            title: 'TRADEX Fuel Stations',
+            title: 'Construction de Citerne',
             category: t('boilerMakingForging'),
-            description: 'Refurbishment and maintenance of TRADEX fuel stations across Cameroon.',
-            image: '/tradex/WhatsApp Image 2025-11-16 at 14.25.59 (2).jpeg'
+            description: 'Tank construction and installation for industrial facilities.',
+            image: '/construction de citerne/1.jpeg',
+            images: [
+                '/construction de citerne/1.jpeg',
+                '/construction de citerne/WhatsApp Image 2025-11-16 at 14.27.17 (1).jpeg',
+                '/construction de citerne/WhatsApp Image 2025-11-16 at 14.27.17 (2) - Copie.jpeg',
+                '/construction de citerne/WhatsApp Image 2025-11-16 at 14.27.17.jpeg'
+            ]
         },
         {
-            title: 'Citerne de Pétrole',
+            title: 'Construction Métallique',
             category: t('boilerMakingForging'),
-            description: 'Oil tank construction and installation for industrial facilities.',
-            image: '/Citerne de pétrole/1.jpeg'
+            description: 'Metal construction projects including buildings and industrial facilities.',
+            image: '/construction metalique/3.jpeg',
+            images: [
+                '/construction metalique/3.jpeg',
+                '/construction metalique/4.jpeg',
+                '/construction metalique/5.jpeg',
+                '/construction metalique/6.jpeg',
+                '/construction metalique/8.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.22 (2).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.25 (3).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.26 (1).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.26 (2).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.26.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.31 (2).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.31 (3).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.32 (1).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.32 (2).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.32.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.33 (1).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.33.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.34 (1).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.34.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.35 (3).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-16 at 14.27.36.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-18 at 10.55.18.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-18 at 10.55.19.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-18 at 10.55.23.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-18 at 10.56.51.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-18 at 10.56.52 (1).jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-18 at 10.56.52.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-18 at 10.56.53.jpeg',
+                '/construction metalique/WhatsApp Image 2025-11-18 at 11.03.58 (1).jpeg'
+            ]
         },
         {
-            title: 'St Josué Hall Reconstruction',
+            title: 'Embeddings Style',
             category: t('boilerMakingForging'),
-            description: 'Complete reconstruction of St Josué Hall at Omnisport, Cameroon with modern metal structures.',
+            description: 'Style embedding and metal fabrication projects.',
+            image: '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.23 (2).jpeg',
+            images: [
+                '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.23 (2).jpeg',
+                '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.24 (1).jpeg',
+                '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.27.jpeg',
+                '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.29.jpeg',
+                '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.30.jpeg',
+                '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.31 (1).jpeg',
+                '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.31.jpeg'
+            ]
+        },
+        {
+            title: 'Mayonnaise ROMA',
+            category: t('boilerMakingForging'),
+            description: 'Industrial metal fabrication for ROMA mayonnaise production facility.',
+            image: '/Mayonnaise ROMA/1.jpeg',
+            images: [
+                '/Mayonnaise ROMA/1.jpeg',
+                '/Mayonnaise ROMA/2.jpeg',
+                '/Mayonnaise ROMA/3.jpeg',
+                '/Mayonnaise ROMA/4.jpeg',
+                '/Mayonnaise ROMA/5.jpeg',
+                '/Mayonnaise ROMA/6.jpeg',
+                '/Mayonnaise ROMA/7.jpeg',
+                '/Mayonnaise ROMA/8.jpeg',
+                '/Mayonnaise ROMA/9.jpeg',
+                '/Mayonnaise ROMA/10.jpeg',
+                '/Mayonnaise ROMA/11.jpeg',
+                '/Mayonnaise ROMA/12.jpeg',
+                '/Mayonnaise ROMA/13.jpeg',
+                '/Mayonnaise ROMA/14.jpeg',
+                '/Mayonnaise ROMA/15.jpeg',
+                '/Mayonnaise ROMA/16.jpeg',
+                '/Mayonnaise ROMA/17.jpeg',
+                '/Mayonnaise ROMA/18.jpeg',
+                '/Mayonnaise ROMA/19.jpeg',
+                '/Mayonnaise ROMA/20.jpeg',
+                '/Mayonnaise ROMA/21.jpeg',
+                '/Mayonnaise ROMA/22.jpeg',
+                '/Mayonnaise ROMA/23.jpeg',
+                '/Mayonnaise ROMA/24.jpeg',
+                '/Mayonnaise ROMA/25.jpeg'
+            ]
+        },
+        {
+            title: 'Pont Roulant',
+            category: t('boilerMakingForging'),
+            description: 'Installation and assembly of overhead cranes for industrial material handling.',
+            image: '/pont roulant/1.jpeg',
+            images: [
+                '/pont roulant/1.jpeg',
+                '/pont roulant/7.jpeg',
+                '/pont roulant/9.jpeg',
+                '/pont roulant/10.jpeg',
+                '/pont roulant/11.jpeg',
+                '/pont roulant/12.jpeg',
+                '/pont roulant/13.jpeg',
+                '/pont roulant/14.jpeg',
+                '/pont roulant/16.jpeg',
+                '/pont roulant/17.jpeg',
+                '/pont roulant/18.jpeg',
+                '/pont roulant/19.jpeg',
+                '/pont roulant/20.jpeg'
+            ]
+        },
+        {
+            title: 'St Josué',
+            category: t('boilerMakingForging'),
+            description: 'Reconstruction of St Josué Hall with modern metal structures.',
             image: '/st josue/1.jpg',
             images: [
                 '/st josue/1.jpg',
@@ -68,85 +174,30 @@ const ProjetsPage = () => {
             ]
         },
         {
-            title: 'Construction Métallique à Douala',
+            title: 'Tuyauterie',
             category: t('boilerMakingForging'),
-            description: 'Metal construction projects in Douala, including buildings and industrial facilities.',
-            image: '/Construction métallique à Douala/1.jpeg',
+            description: 'Piping and metal fabrication for industrial systems.',
+            image: '/tuyauterie/1.jpeg',
             images: [
-                '/Construction métallique à Douala/1.jpeg',
-                '/Construction métallique à Douala/2.jpeg',
-                '/Construction métallique à Douala/3.jpeg',
-                '/Construction métallique à Douala/4.jpeg',
-                '/Construction métallique à Douala/5.jpeg',
-                '/Construction métallique à Douala/6.jpeg'
-            ]
-        },
-        {
-            title: 'Gaz à Jourdin',
-            category: t('boilerMakingForging'),
-            description: 'Gas installation and metal fabrication project at Jourdin facility.',
-            image: '/Gaz a jourdin/1.jpeg',
-            images: [
-                '/Gaz a jourdin/1.jpeg',
-                '/Gaz a jourdin/2.jpeg',
-                '/Gaz a jourdin/3.jpeg',
-                '/Gaz a jourdin/4.jpeg',
-                '/Gaz a jourdin/5.jpeg',
-                '/Gaz a jourdin/6.jpeg',
-                '/Gaz a jourdin/7.jpeg',
-                '/Gaz a jourdin/8.jpeg',
-                '/Gaz a jourdin/9.jpeg',
-                '/Gaz a jourdin/10.jpeg',
-                '/Gaz a jourdin/11.jpeg'
-            ]
-        },
-        {
-            title: 'La Tour de Savons en Poudre',
-            category: t('boilerMakingForging'),
-            description: 'Metal tower construction for powder soap manufacturing and storage.',
-            image: '/La Tour de Savons en poudre/1.jpeg',
-            images: [
-                '/La Tour de Savons en poudre/1.jpeg',
-                '/La Tour de Savons en poudre/2.jpeg',
-                '/La Tour de Savons en poudre/3.jpeg',
-                '/La Tour de Savons en poudre/4.jpeg',
-                '/La Tour de Savons en poudre/5.jpeg',
-                '/La Tour de Savons en poudre/6.jpeg'
-            ]
-        },
-        {
-            title: 'Mayonnaise ROMA',
-            category: t('boilerMakingForging'),
-            description: 'Industrial metal fabrication for ROMA mayonnaise production facility.',
-            image: '/Mayonnaise ROMA/1.jpeg',
-            images: [
-                '/Mayonnaise ROMA/1.jpeg',
-                '/Mayonnaise ROMA/2.jpeg',
-                '/Mayonnaise ROMA/3.jpeg',
-                '/Mayonnaise ROMA/4.jpeg',
-                '/Mayonnaise ROMA/5.jpeg',
-                '/Mayonnaise ROMA/6.jpeg',
-                '/Mayonnaise ROMA/7.jpeg',
-                '/Mayonnaise ROMA/8.jpeg'
-            ]
-        },
-        {
-            title: 'Montage De Pont Roulant',
-            category: t('boilerMakingForging'),
-            description: 'Installation and assembly of overhead cranes for industrial material handling.',
-            image: '/Montage De Pont roulant/WhatsApp Image 2025-11-16 at 14.27.30.jpeg',
-            images: [
-                '/Montage De Pont roulant/WhatsApp Image 2025-11-16 at 14.27.30.jpeg',
-                '/Montage De Pont roulant/WhatsApp Image 2025-11-16 at 14.27.31 (1).jpeg',
-                '/Montage De Pont roulant/WhatsApp Image 2025-11-16 at 14.27.31.jpeg'
+                '/tuyauterie/1.jpeg',
+                '/tuyauterie/2.jpeg',
+                '/tuyauterie/3.jpeg',
+                '/tuyauterie/4.jpeg',
+                '/tuyauterie/5.jpeg',
+                '/tuyauterie/6.jpeg',
+                '/tuyauterie/7.jpeg',
+                '/tuyauterie/8.jpeg',
+                '/tuyauterie/9.jpeg',
+                '/tuyauterie/10.jpeg'
             ]
         }
     ];
 
     return (
         <div className='min-h-screen flex-col w-full flex justify-start items-start'>
-            <div className='relative w-full -top-[56px] h-[50vh] object-cover'>
-                <img src={"./hero2.jpg"} className='relative z-0 flex h-full w-full object-cover justify-center items-center' />
+            <div className='relative w-full -top-[56px] h-[50vh] object-cover bg-primary'>
+                  <img src={"/construction metalique/WhatsApp Image 2025-11-16 at 14.27.31 (3).jpeg"} className='relative z-0 flex h-full w-full  object-cover justify-center items-center' />
+               
             </div>
 
             <section className="flex justify-start xl:justify-center z-10 pb-8 xl:pb-30 items-center w-full">

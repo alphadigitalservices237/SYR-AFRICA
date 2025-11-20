@@ -9,8 +9,8 @@ const HeroSection = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const images = [
-        '/Construction métallique à Douala/1.jpeg',
-        '/Charpente City Stade FEICOM/1.jpeg',
+        '/construction metalique/3.jpeg',
+        '/Charpente City Stade FEICOM/2.jpeg',
         '/st josue/1.jpg'
     ];
 

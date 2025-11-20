@@ -1,8 +1,10 @@
 import { Instagram } from "lucide-react"
 import { NavLink } from "react-router"
+import { useTranslation } from 'react-i18next';
 
 
 const InfoTopHeader = () => {
+    const { t } = useTranslation();
     return (
         <section className="hidden lg:flex justify-center  items-center w-full">
             <div className="w-full flex max-w-[1450px] px-4 xl:px-44 justify-between items-center py-6">
@@ -26,7 +28,7 @@ const InfoTopHeader = () => {
                                         d="M17.985 6.535a5 5 0 0 0-3.522-3.523m.707 4.283a2.08 2.08 0 0 0-1.467-1.468M18 18.833c-3.167 0-6.115-.929-8.59-2.53a15.9 15.9 0 0 1-4.713-4.714A15.75 15.75 0 0 1 2.167 3h5.648l.993 4.477-1.686 1.686a12.56 12.56 0 0 0 4.714 4.714l1.687-1.687 4.477.996z"
                                     ></path>
                                 </svg>
-                                <span className="font-bold text-sm">Call Support</span>
+                                <span className="font-bold text-sm">{t("callSupport")}</span>
                             </div>
                             <span className="text-sm font-medium">(+237) 659 312 616  </span>
 
@@ -52,9 +54,9 @@ const InfoTopHeader = () => {
                                         clipRule="evenodd"
                                     ></path>
                                 </svg>
-                                <span className="font-bold text-sm">Email Support</span>
+                                <span className="font-bold text-sm">{t("emailSupport")}</span>
                             </div>
-                            <span className="text-sm font-medium">syrafrica_cameroon@yahoo.com</span>
+                            <span className="text-sm font-medium">syrafrica_cameroun@yahoo.com</span>
 
                         </div>
 
@@ -75,7 +77,7 @@ const InfoTopHeader = () => {
                                         d="M9 .167a8.333 8.333 0 1 1 0 16.666A8.333 8.333 0 0 1 9 .167m0 1.667a6.667 6.667 0 1 0 0 13.333A6.667 6.667 0 0 0 9 1.834M9 3.5a.833.833 0 0 1 .827.736l.006.098v3.821l2.256 2.256a.833.833 0 0 1-1.1 1.248l-.078-.07-2.5-2.5a.83.83 0 0 1-.237-.48L8.166 8.5V4.334A.833.833 0 0 1 9 3.5"
                                     ></path>
                                 </svg>
-                                <span className="font-bold text-sm">Work Hour</span>
+                                <span className="font-bold text-sm">{t("workHour")}</span>
                             </div>
                             <span className="text-sm font-medium">24h/24 7j/7</span>
 
@@ -88,7 +90,7 @@ const InfoTopHeader = () => {
 
                             <div className="flex gap-2 justify-start items-start">
 
-                                <span className="font-bold text-sm">Social networks</span>
+                                <span className="font-bold text-sm">{t("socialNetworks")}</span>
                             </div>
                             <div className="w-full">
                                 <div className="text-sm flex w-full  justify-between items-center font-medium">

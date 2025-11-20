@@ -107,7 +107,6 @@ const Contact = () => {
       ${t("acceptPolicyLabel")}: ${data.acceptPolicy ? t("yes") : t("no")}
     `;
 
-    // code de l'app yahoo ~ eaxtesrxovohprmk
 
     const templateParams = {
       name: data.fullName,
@@ -164,7 +163,7 @@ const Contact = () => {
             <p className="text-gray-600 mb-6">{t("thankYouMessage")}</p>
             <button
               onClick={() => setIsSubmitted(false)}
-              className="bg-primary hover:bg-black hover:text-white text-white px-6 py-3 rounded-md font-medium transition-colors"
+              className="bg-primary hover:bg-black hover:text-white text-white px-6 py-3 font-medium transition-colors"
             >
               {t("sendAnotherMessage")}
             </button>

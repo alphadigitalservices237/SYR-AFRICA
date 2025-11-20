@@ -10,23 +10,24 @@ const Projects = () => {
     const carouselRef = useRef(null);
 
     const projects = [
-        { id: 1, image: '/st josue/1.jpg', title: t('project1Title'), description: t('project1Desc') },
-        { id: 2, image: '/Charpente City Stade FEICOM/1.jpeg', title: t('project2Title'), description: t('project2Desc') },
-        { id: 3, image: '/tradex/WhatsApp Image 2025-11-16 at 14.25.59 (2).jpeg', title: t('project3Title'), description: t('project3Desc') },
-        { id: 4, image: '/Mayonnaise ROMA/1.jpeg', title: t('project4Title'), description: t('project4Desc') },
-        { id: 5, image: '/Montage De Pont roulant/WhatsApp Image 2025-11-16 at 14.27.30.jpeg', title: t('project5Title'), description: t('project5Desc') },
+        { id: 1, image: '/Charpente City Stade FEICOM/2.jpeg', title: 'Charpente City Stade FEICOM', description: t('project1Desc') },
+        { id: 2, image: '/construction de citerne/1.jpeg', title: 'Construction de Citerne', description: t('project2Desc') },
+        { id: 3, image: '/construction metalique/3.jpeg', title: 'Construction Métallique', description: t('project3Desc') },
+        { id: 4, image: '/embeddings styleb/WhatsApp Image 2025-11-16 at 14.27.23 (2).jpeg', title: 'Embeddings Style', description: t('project4Desc') },
+        { id: 5, image: '/Mayonnaise ROMA/1.jpeg', title: 'Mayonnaise ROMA', description: t('project5Desc') },
+        { id: 6, image: '/pont roulant/1.jpeg', title: 'Pont Roulant', description: t('project1Desc') },
+        { id: 7, image: '/st josue/1.jpg', title: 'St Josué', description: t('project2Desc') },
+        { id: 8, image: '/tuyauterie/1.jpeg', title: 'Tuyauterie', description: t('project3Desc') },
     ];
 
+    const maxPage = Math.ceil(projects.length / 3) - 1;
+
     const nextSlide = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex >= projects.length - 3 ? 0 : prevIndex + 1
-        );
+        setCurrentIndex((prev) => Math.min(maxPage, prev + 1));
     };
 
     const prevSlide = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex <= 0 ? projects.length - 3 : prevIndex - 1
-        );
+        setCurrentIndex((prev) => Math.max(0, prev - 1));
     };
 
     return (
@@ -76,11 +77,11 @@ const Projects = () => {
                 <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-4 xl:px-44  m-0 p-0 justify-start items-start">
                         <div
                             ref={carouselRef}
-                            className="flex gap-4 md:gap-6 transition-transform duration-300 ease-in-out"
-                            style={{ transform: `translateX(-${currentIndex * (100 / 2)}%)` }}
+                            className="flex gap-2 md:gap-4 lg:gap-6 transition-transform duration-300 ease-in-out"
+                            style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
                         >
                             {projects.map((project) => (
-                                <div key={project.id} className="flex-shrink-0 w-4/5 md:w-2/5">
+                                <div key={project.id} className="flex-shrink-0 w-1/3">
                                     <ProjectCard project={project} />
                                 </div>
                             ))}

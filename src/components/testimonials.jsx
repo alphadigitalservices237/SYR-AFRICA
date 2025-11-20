@@ -6,28 +6,28 @@ const Testimonials = () => {
     const { t } = useTranslation();
     const testimonials = [
         {
+            name: t("testimonial2Name"),
+            position: t("testimonial2Position"),
+            text: t("testimonial2Text"),
+            avatar: "/Charpente City Stade FEICOM/2.jpeg"
+        },
+        {
+            name: t("testimonial4Name"),
+            position: t("testimonial4Position"),
+            text: t("testimonial4Text"),
+            avatar: "/Mayonnaise ROMA/1.jpeg"
+        },
+        {
             name: t("testimonial1Name"),
             position: t("testimonial1Position"),
             text: t("testimonial1Text"),
             avatar: "/st josue/1.jpg"
         },
         {
-            name: t("testimonial2Name"),
-            position: t("testimonial2Position"),
-            text: t("testimonial2Text"),
-            avatar: "/Charpente City Stade FEICOM/1.jpeg"
-        },
-        {
             name: t("testimonial3Name"),
             position: t("testimonial3Position"),
             text: t("testimonial3Text"),
-            avatar: "/Construction métallique à Douala/1.jpeg"
-        },
-        {
-            name: t("testimonial4Name"),
-            position: t("testimonial4Position"),
-            text: t("testimonial4Text"),
-            avatar: "/Gaz a jourdin/1.jpeg"
+            avatar: "/construction metalique/3.jpeg"
         }
     ];
 
