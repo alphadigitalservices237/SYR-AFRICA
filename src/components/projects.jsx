@@ -13,7 +13,7 @@ const Projects = () => {
         { id: 1, image: '/Charpente City Stade FEICOM/2.jpeg', title: 'Charpente City Stade FEICOM', description: t('project1Desc') },
         { id: 2, image: '/construction de citerne/1.jpeg', title: 'Construction de Citerne', description: t('project2Desc') },
         { id: 3, image: '/construction metalique/3.jpeg', title: 'Construction Métallique', description: t('project3Desc') },
-        { id: 4, image: '/embeddings styleb/WhatsApp Image 2025-11-16 at 14.27.23 (2).jpeg', title: 'Embeddings Style', description: t('project4Desc') },
+        { id: 4, image: '/embeddings style/WhatsApp Image 2025-11-16 at 14.27.31 (1).jpeg', title: 'Embeddings Style', description: t('project4Desc') },
         { id: 5, image: '/Mayonnaise ROMA/1.jpeg', title: 'Mayonnaise ROMA', description: t('project5Desc') },
         { id: 6, image: '/pont roulant/1.jpeg', title: 'Pont Roulant', description: t('project1Desc') },
         { id: 7, image: '/st josue/1.jpg', title: 'St Josué', description: t('project2Desc') },
@@ -74,7 +74,7 @@ const Projects = () => {
                 </div>
                         <div className=" absolute w-full flex justify-center items-center overflow-x-hidden   top-[20%] md:top-[15%] xl:top-[20%] left-0">
 
-                <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-4 xl:px-44  m-0 p-0 justify-start items-start">
+               <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-0 md:px-4 xl:px-44  m-0 p-0 justify-start items-start">
                         <div
                             ref={carouselRef}
                             className="flex gap-2 md:gap-4 lg:gap-6 transition-transform duration-300 ease-in-out"

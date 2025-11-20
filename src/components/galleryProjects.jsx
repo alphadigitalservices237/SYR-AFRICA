@@ -124,7 +124,7 @@ const gallerie = [
 const GalleryProjects = () => {
     const { t } = useTranslation();
     return ( 
-        <section className="flex relative   justify-start z-10 min-h-[70vh]  lg:min-h-[120vh]  items-start w-full">
+        <section className="flex relative  pointer-events-none  justify-start z-10 min-h-[70vh]  lg:min-h-[120vh]  items-start w-full">
             <div className='w-full bg-primary flex justify-center   h-auto items-start min-h-[373px]'>
                 <div className="w-full  relative flex flex-col py-8 md:py-16 max-w-[1450px] px-4 xl:px-44  m-0 p-0 justify-start items-start">
 

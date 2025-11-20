@@ -82,7 +82,7 @@ const Servicespage = () => {
                         <span className="border-l-2  border-primary text-black gap-2 pl-3 font-bold">{t("services")}</span>
 
                         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full gap-4 lg:gap-0">
-                            <h3 className="text-2xl lg:text-3xl text-black  max-w-sm font-bold">{t("servicesSubtitle")}</h3>
+                            <h3 className="text-2xl lg:text-3xl text-black  max-w-xl font-bold">{t("servicesSubtitle")}</h3>
 
                             <NavLink to="/services" className={"py-3 lg:py-5 flex gap-2 font-medium bg-primary justify-center items-center px-6 lg:px-8"}>
                                 <span>{t("learnMore")}</span>
