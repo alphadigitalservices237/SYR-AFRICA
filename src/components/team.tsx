@@ -50,12 +50,12 @@ const Team = () => {
                     <div className='w-full flex md:flex-row  flex-col gap-8 justify-start items-center'>
 
                         <div className='w-full lg:w-1/2 bg-white h-72 flex flex-col gap-4'>
-                            <img src="/st josue/3.png" className="h-full w-full object-cover" />
+                            <img src="/st josue/18.jpg" className="h-full w-full object-cover" />
                         </div>
 
 
                         <div className='w-full lg:w-1/2 bg-white h-72 flex flex-col gap-4'>
-                            <img src="/st josue/21.png" className="h-full w-full object-cover" />
+                            <img src="/st josue/21.jpg" className="h-full w-full object-cover" />
                         </div>
 
 
