@@ -125,7 +125,7 @@ const Services = () => {
                             </div>
                             <div
                                 className="service-card relative bg-cover bg-center w-1/3 h-full flex-shrink-0"
-                                style={{ backgroundImage: "url('/construction metalique/WhatsApp Image 2025-11-18 at 10.55.23.jpeg')" }}
+                                style={{ backgroundImage: "url('/st josue/building.jpeg')" }}
                             >
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
                                 <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">

@@ -108,7 +108,7 @@ const Footer = () => {
             <div className="flex flex-col gap-y-4 text-sm">
               <div className="flex flex-col gap-1">
                 <span className="font-medium  text-primary">Yaoundé - CMR</span>
-                <span className="text-white font-light  text-xs lg:text-sm">Omnisport, Rue Coeur Ouvert</span>
+                <span className="text-white font-light  text-xs lg:text-sm">Omnisport</span>
               </div>
 
               {/* <div className="flex flex-col gap-1">
@@ -187,7 +187,11 @@ const Footer = () => {
                 <span className="font-medium text-primary">syrafrica_cameroun@yahoo.com</span>
                
               </div>
+              <div className="flex items-center gap-x-2 text-xs lg:text-sm">
+                <Mail className="size-3 lg:size-4 text-primary flex-shrink-0" />
                 <span className="font-medium text-primary">syrafrica.cameroun@gmail.com</span>
+               
+              </div>
             </div>
           </div>
 

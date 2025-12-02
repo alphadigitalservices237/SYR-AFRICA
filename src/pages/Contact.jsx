@@ -33,8 +33,8 @@ const Contact = () => {
            key: 'industrialSystems',
            name: t('industrialSystemsEquipment'),
            services: [
-               { name: t('conveyorSystems') },
-               { name: t('processEquipment') },
+              //  { name: t('conveyorSystems') },
+              //  { name: t('processEquipment') },
                { name: t('fabricationInstallationAscenseurs') },
                { name: t('tuyauterie') },
                { name: t('pontsRoulants') }
@@ -44,27 +44,27 @@ const Contact = () => {
            key: 'architecturalMetalworks',
            name: t('architecturalMetalworks'),
            services: [
-               { name: t('facadeSystems') },
-               { name: t('staircasesRailings') },
-               { name: t('fabricationOuvragesDivers') },
-               { name: t('menuiserieMetallique') }
+              //  { name: t('facadeSystems') },
+              //  { name: t('staircasesRailings') },
+              //  { name: t('fabricationOuvragesDivers') },
+              //  { name: t('menuiserieMetallique') }
            ]
        },
-       {
-           key: 'marineMaintenance',
-           name: t('marineMaintenanceServices'),
-           services: [
-               { name: t('shipRepair') },
-               { name: t('offshoreStructures') },
-               { name: t('servicesNavals') },
-               { name: t('maintenanceNavale') }
-           ]
-       },
+      //  {
+      //      key: 'marineMaintenance',
+      //      name: t('marineMaintenanceServices'),
+      //      services: [
+      //          { name: t('shipRepair') },
+      //          { name: t('offshoreStructures') },
+      //          { name: t('servicesNavals') },
+      //          { name: t('maintenanceNavale') }
+      //      ]
+      //  },
        {
            key: 'safetySecurity',
            name: t('safetySecuritySystems'),
            services: [
-               { name: t('systemesSecurite') },
+              //  { name: t('systemesSecurite') },
                { name: t('installationSystemesAntiIncendie') }
            ]
        }
