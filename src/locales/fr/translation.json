@@ -154,6 +154,13 @@
   "testimonial3Text": "« Équipe compétente et à l'écoute. Ils ont su répondre à toutes nos exigences techniques avec créativité. »",
   "testimonial4Name": "Njiah Derrick",
   "testimonial4Position": "Collaborateur",
+  "testimonial5Name": "Mme Sakina",
+"testimonial5Position": "PDG de SOCOGIE",
+"testimonial5Text": "« Équipe compétente et à l’écoute. Ils ont su répondre à toutes nos exigences techniques avec créativité.»",
+
+"testimonial6Name": "Mme ENOGO",
+"testimonial6Position": "Stratège de marque chez Alpha",
+"testimonial6Text": "« Service impeccable. Leur accompagnement, leur réactivité et leur sens du détail nous ont permis d’obtenir un résultat à la hauteur de nos attentes.»",
   "testimonial4Text": "« Projet écologique réalisé avec expertise. Respect des normes environnementales et résultat durable. »",
   "projetspage1Title": "Reconstruction Salle de Fête Omnisport",
   "projetspage1Desc": "Reconstruction complète de la salle de fête Omnisport avec des installations modernes et des améliorations structurelles.",
@@ -272,7 +279,7 @@
   "metalConstructionDesc": "Structures et charpentes métalliques sur mesure",
   "publicWorks": "Marché Public",
   "publicWorksDesc": "Projets de marché public et infrastructures",
-  "buildingConstruction": "Construction de Bâtiment",
+  "buildingConstruction": "Bâtiment",
   "buildingConstructionDesc": "Construction de bâtiments résidentiels et commerciaux",
   "elevators": "Ascenseur",
   "elevatorsDesc": "Installation et maintenance d'ascenseurs"

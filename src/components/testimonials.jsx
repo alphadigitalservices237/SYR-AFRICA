@@ -28,6 +28,19 @@ const Testimonials = () => {
             position: t("testimonial3Position"),
             text: t("testimonial3Text"),
             avatar: "/construction metalique/3.jpeg"
+        },
+          {
+            name: t("testimonial5Name"),
+            position: t("testimonial5Position"),
+            text: t("testimonial5Text"),
+            avatar: "/construction metalique/3.jpeg"
+        },
+        ,
+          {
+            name: t("testimonial6Name"),
+            position: t("testimonial6Position"),
+            text: t("testimonial6Text"),
+            avatar: "/st josue/20.jpg"
         }
     ];
 
@@ -40,7 +53,7 @@ const Testimonials = () => {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 px-2 lg:px-5 lg:grid-cols-2  gap-4  lg:gap-8">
+                <div className="grid grid-cols-1 px-2 lg:px-5 lg:grid-cols-2 pb-72 gap-4  lg:gap-8">
                     {testimonials.map((testimonial, index) => (
                         <TestimonialCard
                             key={index}

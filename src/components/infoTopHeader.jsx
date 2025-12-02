@@ -57,6 +57,7 @@ const InfoTopHeader = () => {
                                 <span className="font-bold text-sm">{t("emailSupport")}</span>
                             </div>
                             <span className="text-sm font-medium">syrafrica_cameroun@yahoo.com</span>
+                            <span className="text-sm font-medium">syrafrica.cameroun@gmail.com</span>
 
                         </div>
 

@@ -185,7 +185,9 @@ const Footer = () => {
               <div className="flex items-center gap-x-2 text-xs lg:text-sm">
                 <Mail className="size-3 lg:size-4 text-primary flex-shrink-0" />
                 <span className="font-medium text-primary">syrafrica_cameroun@yahoo.com</span>
+               
               </div>
+                <span className="font-medium text-primary">syrafrica.cameroun@gmail.com</span>
             </div>
           </div>
 

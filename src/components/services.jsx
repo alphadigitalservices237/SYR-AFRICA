@@ -12,7 +12,7 @@ const Services = () => {
     const servicesRef = useRef(null)
     const [currentPage, setCurrentPage] = useState(0);
 
-    const maxPage = Math.ceil(5 / 3) - 1; 
+    const maxPage = Math.ceil(10 / 3) - 1; 
 
     const scrollLeft = () => {
         setCurrentPage((prev) => Math.max(0, prev - 1));
@@ -89,7 +89,7 @@ const Services = () => {
                         <div className="flex gap-2 md:gap-4 lg:gap-6 transition-transform duration-300" style={{ transform: `translateX(-${currentPage * (100 / 3)}%)` }}>
                             <div
                                 className="service-card relative bg-cover bg-center w-1/3 h-full flex-shrink-0"
-                                style={{ backgroundImage: "url('/construction de citerne/1.jpeg')" }}
+                                style={{ backgroundImage: "url('/construction metalique/WhatsApp Image 2025-11-16 at 14.27.31 (2).jpeg')" }}
                             >
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
                                 <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
@@ -101,7 +101,7 @@ const Services = () => {
                             </div>
                               <div
                                   className="service-card relative bg-cover bg-center w-1/3 h-full flex-shrink-0"
-                                  style={{ backgroundImage: "url('/construction metalique/3.jpeg')" }}
+                                  style={{ backgroundImage: "url('/construction metalique/WhatsApp Image 2025-11-16 at 14.27.19 (1).jpeg')" }}
                               >
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
                                 <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
@@ -113,7 +113,7 @@ const Services = () => {
                             </div>
                               <div
                                 className="service-card relative bg-cover bg-center w-1/3 h-full flex-shrink-0"
-                                style={{ backgroundImage: "url('/embeddings style/WhatsApp Image 2025-11-16 at 14.27.23 (2).jpeg')" }}
+                                style={{ backgroundImage: "url('/Charpente City Stade FEICOM/WhatsApp Image 2025-11-18 at 10.56.54.jpeg')" }}
                             >
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
                                 <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
@@ -125,7 +125,7 @@ const Services = () => {
                             </div>
                             <div
                                 className="service-card relative bg-cover bg-center w-1/3 h-full flex-shrink-0"
-                                style={{ backgroundImage: "url('/Mayonnaise ROMA/1.jpeg')" }}
+                                style={{ backgroundImage: "url('/construction metalique/WhatsApp Image 2025-11-18 at 10.55.23.jpeg')" }}
                             >
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
                                 <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
@@ -137,7 +137,7 @@ const Services = () => {
                             </div>
                             <div
                                 className="service-card relative bg-cover bg-center w-1/3 h-full flex-shrink-0"
-                                style={{ backgroundImage: "url('/tuyauterie/1.jpeg')" }}
+                                style={{ backgroundImage: "url('/tuyauterie/ascensseurs.jpeg')" }}
                             >
                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
                                 <div className="relative z-10 flex p-4 lg:p-8 w-full text-balance justify-end flex-col text-white h-full gap-2 lg:gap-4 items-start">
