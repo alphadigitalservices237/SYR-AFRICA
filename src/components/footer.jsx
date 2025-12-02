@@ -166,8 +166,8 @@ const Footer = () => {
           </div>
 
           {/* Ressources (hidden on mobile) */}
-          <div className="hidden md:flex flex-col gap-y-6">
-          
+          <div className="flex flex-col justify-start items-start gap-y-6">
+              <img src="./qrcode.png" className="h-56 object-contain" />
           </div>
 
           {/* Contact Info */}

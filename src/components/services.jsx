@@ -12,7 +12,7 @@ const Services = () => {
     const servicesRef = useRef(null)
     const [currentPage, setCurrentPage] = useState(0);
 
-    const maxPage = Math.ceil(5 / 3) - 1; // 1 page (0 and 1)
+    const maxPage = Math.ceil(5 / 3) - 1; 
 
     const scrollLeft = () => {
         setCurrentPage((prev) => Math.max(0, prev - 1));
