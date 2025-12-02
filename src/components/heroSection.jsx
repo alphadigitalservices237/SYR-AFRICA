@@ -38,8 +38,8 @@ const HeroSection = () => {
         <div className='flex flex-col  justify-center items-center w-full relative  gap-8 '>
             <div className='relative flex  justify-center  w-full items-center h-[40vh] lg:h-[80vh] lg:-top-[55px]'>
 
+                <div className='absolute inset-0 w-full bg-gradient-to-b from-transparent to-black z-10'></div>
                 <img src={images[currentImageIndex]} className='relative z-0 flex h-full w-full  object-cover justify-center items-center' />
-                <div className='absolute inset-0 w-full bg-gradient-to-b from-transparent to-black/50 z-10'></div>
 
 
                 <div className='absolute  w-full   z-50  flex  px-4 xl:px-0 h-full flex-col justify-end pb-8 lg:pb-14 items-center'>
